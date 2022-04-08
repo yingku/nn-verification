@@ -1,0 +1,154 @@
+Compiling the C compiler identification source file "CMakeCCompilerId.c" failed.
+Compiler: /Users/yingshyanku/anaconda3/bin/x86_64-apple-darwin13.4.0-clang 
+Build flags: -march=core2;-mtune=haswell;-mssse3;-ftree-vectorize;-fPIC;-fPIE;-fstack-protector-strong;-O2;-pipe
+Id flags:  
+
+The output was:
+1
+ld: warning: ignoring file /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/lib/libSystem.tbd, file was built for unsupported file format ( 0x2D 0x2D 0x2D 0x20 0x21 0x74 0x61 0x70 0x69 0x2D 0x74 0x62 0x64 0x2D 0x76 0x33 ) which is not the architecture being linked (x86_64): /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/lib/libSystem.tbd
+ld: dynamic main executables must link with libSystem.dylib for architecture x86_64
+clang-4.0: error: linker command failed with exit code 1 (use -v to see invocation)
+
+
+Detecting C compiler ABI info failed to compile with the following output:
+Change Dir: /Users/yingshyanku/Desktop/Marabou/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/Users/yingshyanku/anaconda3/bin/make -f Makefile cmTC_3212d/fast && /Users/yingshyanku/anaconda3/bin/make  -f CMakeFiles/cmTC_3212d.dir/build.make CMakeFiles/cmTC_3212d.dir/build
+make[1]: Entering directory '/Users/yingshyanku/Desktop/Marabou/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_3212d.dir/CMakeCCompilerABI.c.o
+/Users/yingshyanku/anaconda3/bin/x86_64-apple-darwin13.4.0-clang   -march=core2 -mtune=haswell -mssse3 -ftree-vectorize -fPIC -fPIE -fstack-protector-strong -O2 -pipe  -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk -mmacosx-version-min=10.14   -v -Wl,-v -MD -MT CMakeFiles/cmTC_3212d.dir/CMakeCCompilerABI.c.o -MF CMakeFiles/cmTC_3212d.dir/CMakeCCompilerABI.c.o.d -o CMakeFiles/cmTC_3212d.dir/CMakeCCompilerABI.c.o -c /usr/local/Cellar/cmake/3.22.1/share/cmake/Modules/CMakeCCompilerABI.c
+clang version 4.0.1 (tags/RELEASE_401/final)
+Target: x86_64-apple-darwin13.4.0
+Thread model: posix
+InstalledDir: /Users/yingshyanku/anaconda3/bin
+clang-4.0: warning: -Wl,-v: 'linker' input unused [-Wunused-command-line-argument]
+ "/Users/yingshyanku/anaconda3/bin/clang-4.0" -cc1 -triple x86_64-apple-macosx10.14.0 -Wdeprecated-objc-isa-usage -Werror=deprecated-objc-isa-usage -emit-obj -disable-free -disable-llvm-verifier -discard-value-names -main-file-name CMakeCCompilerABI.c -mrelocation-model pic -pic-level 2 -mthread-model posix -mdisable-fp-elim -masm-verbose -munwind-tables -target-cpu core2 -target-feature +ssse3 -target-linker-version 241.9 -v -dwarf-column-info -debugger-tuning=lldb -coverage-notes-file /Users/yingshyanku/Desktop/Marabou/build/CMakeFiles/CMakeTmp/CMakeFiles/cmTC_3212d.dir/CMakeCCompilerABI.c.gcno -resource-dir /Users/yingshyanku/anaconda3/bin/../lib/clang/4.0.1 -dependency-file CMakeFiles/cmTC_3212d.dir/CMakeCCompilerABI.c.o.d -sys-header-deps -MT CMakeFiles/cmTC_3212d.dir/CMakeCCompilerABI.c.o -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk -O2 -fdebug-compilation-dir /Users/yingshyanku/Desktop/Marabou/build/CMakeFiles/CMakeTmp -ferror-limit 19 -fmessage-length 0 -stack-protector 2 -fblocks -fobjc-runtime=macosx-10.14.0 -fencode-extended-block-signature -fmax-type-align=16 -fdiagnostics-show-option -vectorize-loops -vectorize-slp -o CMakeFiles/cmTC_3212d.dir/CMakeCCompilerABI.c.o -x c /usr/local/Cellar/cmake/3.22.1/share/cmake/Modules/CMakeCCompilerABI.c
+clang -cc1 version 4.0.1 based upon LLVM 4.0.1 default target x86_64-apple-darwin18.7.0
+ignoring nonexistent directory "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/Library/Frameworks"
+#include "..." search starts here:
+#include <...> search starts here:
+ /Users/yingshyanku/anaconda3/bin/../lib/clang/4.0.1/include
+ /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/usr/include
+ /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/System/Library/Frameworks (framework directory)
+End of search list.
+Linking C executable cmTC_3212d
+/usr/local/Cellar/cmake/3.22.1/bin/cmake -E cmake_link_script CMakeFiles/cmTC_3212d.dir/link.txt --verbose=1
+/Users/yingshyanku/anaconda3/bin/x86_64-apple-darwin13.4.0-clang -march=core2 -mtune=haswell -mssse3 -ftree-vectorize -fPIC -fPIE -fstack-protector-strong -O2 -pipe  -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk -mmacosx-version-min=10.14 -Wl,-search_paths_first -Wl,-headerpad_max_install_names -Wl,-pie -Wl,-headerpad_max_install_names -Wl,-dead_strip_dylibs -v -Wl,-v CMakeFiles/cmTC_3212d.dir/CMakeCCompilerABI.c.o -o cmTC_3212d 
+clang version 4.0.1 (tags/RELEASE_401/final)
+Target: x86_64-apple-darwin13.4.0
+Thread model: posix
+InstalledDir: /Users/yingshyanku/anaconda3/bin
+ "/Users/yingshyanku/anaconda3/bin/x86_64-apple-darwin13.4.0-ld" -demangle -lto_library /Users/yingshyanku/anaconda3/lib/libLTO.dylib -dynamic -arch x86_64 -macosx_version_min 10.14.0 -pie -syslibroot /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk -o cmTC_3212d -search_paths_first -headerpad_max_install_names -pie -headerpad_max_install_names -dead_strip_dylibs -v CMakeFiles/cmTC_3212d.dir/CMakeCCompilerABI.c.o -lSystem /Users/yingshyanku/anaconda3/bin/../lib/clang/4.0.1/lib/darwin/libclang_rt.osx.a
+@(#)PROGRAM:ld  PROJECT: ld64-274.2
+configured to support archs: armv6 armv7 armv7s arm64 i386 x86_64 x86_64h armv6m armv7k armv7m armv7em (tvOS)
+Library search paths:
+	/Users/yingshyanku/anaconda3/lib
+	/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/lib
+Framework search paths:
+	/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks/
+ld: warning: ignoring file /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/lib/libSystem.tbd, file was built for unsupported file format ( 0x2D 0x2D 0x2D 0x20 0x21 0x74 0x61 0x70 0x69 0x2D 0x74 0x62 0x64 0x2D 0x76 0x33 ) which is not the architecture being linked (x86_64): /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/lib/libSystem.tbd
+ld: dynamic main executables must link with libSystem.dylib for architecture x86_64
+clang-4.0: error: linker command failed with exit code 1 (use -v to see invocation)
+make[1]: *** [CMakeFiles/cmTC_3212d.dir/build.make:100: cmTC_3212d] Error 1
+make[1]: Leaving directory '/Users/yingshyanku/Desktop/Marabou/build/CMakeFiles/CMakeTmp'
+make: *** [Makefile:127: cmTC_3212d/fast] Error 2
+
+
+
+
+Determining if the C compiler works failed with the following output:
+Change Dir: /Users/yingshyanku/Desktop/Marabou/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/Users/yingshyanku/anaconda3/bin/make -f Makefile cmTC_92d2b/fast && /Users/yingshyanku/anaconda3/bin/make  -f CMakeFiles/cmTC_92d2b.dir/build.make CMakeFiles/cmTC_92d2b.dir/build
+make[1]: Entering directory '/Users/yingshyanku/Desktop/Marabou/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_92d2b.dir/testCCompiler.c.o
+/Users/yingshyanku/anaconda3/bin/x86_64-apple-darwin13.4.0-clang   -march=core2 -mtune=haswell -mssse3 -ftree-vectorize -fPIC -fPIE -fstack-protector-strong -O2 -pipe  -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk -mmacosx-version-min=10.14 -MD -MT CMakeFiles/cmTC_92d2b.dir/testCCompiler.c.o -MF CMakeFiles/cmTC_92d2b.dir/testCCompiler.c.o.d -o CMakeFiles/cmTC_92d2b.dir/testCCompiler.c.o -c /Users/yingshyanku/Desktop/Marabou/build/CMakeFiles/CMakeTmp/testCCompiler.c
+Linking C executable cmTC_92d2b
+/usr/local/Cellar/cmake/3.22.1/bin/cmake -E cmake_link_script CMakeFiles/cmTC_92d2b.dir/link.txt --verbose=1
+/Users/yingshyanku/anaconda3/bin/x86_64-apple-darwin13.4.0-clang -march=core2 -mtune=haswell -mssse3 -ftree-vectorize -fPIC -fPIE -fstack-protector-strong -O2 -pipe  -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk -mmacosx-version-min=10.14 -Wl,-search_paths_first -Wl,-headerpad_max_install_names -Wl,-pie -Wl,-headerpad_max_install_names -Wl,-dead_strip_dylibs  CMakeFiles/cmTC_92d2b.dir/testCCompiler.c.o -o cmTC_92d2b 
+ld: warning: ignoring file /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/lib/libSystem.tbd, file was built for unsupported file format ( 0x2D 0x2D 0x2D 0x20 0x21 0x74 0x61 0x70 0x69 0x2D 0x74 0x62 0x64 0x2D 0x76 0x33 ) which is not the architecture being linked (x86_64): /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/lib/libSystem.tbd
+ld: dynamic main executables must link with libSystem.dylib for architecture x86_64
+clang-4.0: error: linker command failed with exit code 1 (use -v to see invocation)
+make[1]: *** [CMakeFiles/cmTC_92d2b.dir/build.make:100: cmTC_92d2b] Error 1
+make[1]: Leaving directory '/Users/yingshyanku/Desktop/Marabou/build/CMakeFiles/CMakeTmp'
+make: *** [Makefile:127: cmTC_92d2b/fast] Error 2
+
+
+
+Compiling the C compiler identification source file "CMakeCCompilerId.c" failed.
+Compiler: /Users/yingshyanku/anaconda3/bin/x86_64-apple-darwin13.4.0-clang 
+Build flags: -march=core2;-mtune=haswell;-mssse3;-ftree-vectorize;-fPIC;-fPIE;-fstack-protector-strong;-O2;-pipe
+Id flags:  
+
+The output was:
+1
+ld: warning: ignoring file /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/lib/libSystem.tbd, file was built for unsupported file format ( 0x2D 0x2D 0x2D 0x20 0x21 0x74 0x61 0x70 0x69 0x2D 0x74 0x62 0x64 0x2D 0x76 0x33 ) which is not the architecture being linked (x86_64): /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/lib/libSystem.tbd
+ld: dynamic main executables must link with libSystem.dylib for architecture x86_64
+clang-4.0: error: linker command failed with exit code 1 (use -v to see invocation)
+
+
+Detecting C compiler ABI info failed to compile with the following output:
+Change Dir: /Users/yingshyanku/Desktop/Marabou/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/Users/yingshyanku/anaconda3/bin/make -f Makefile cmTC_4512b/fast && /Users/yingshyanku/anaconda3/bin/make  -f CMakeFiles/cmTC_4512b.dir/build.make CMakeFiles/cmTC_4512b.dir/build
+make[1]: Entering directory '/Users/yingshyanku/Desktop/Marabou/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_4512b.dir/CMakeCCompilerABI.c.o
+/Users/yingshyanku/anaconda3/bin/x86_64-apple-darwin13.4.0-clang   -march=core2 -mtune=haswell -mssse3 -ftree-vectorize -fPIC -fPIE -fstack-protector-strong -O2 -pipe  -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk -mmacosx-version-min=10.14   -v -Wl,-v -MD -MT CMakeFiles/cmTC_4512b.dir/CMakeCCompilerABI.c.o -MF CMakeFiles/cmTC_4512b.dir/CMakeCCompilerABI.c.o.d -o CMakeFiles/cmTC_4512b.dir/CMakeCCompilerABI.c.o -c /usr/local/Cellar/cmake/3.22.1/share/cmake/Modules/CMakeCCompilerABI.c
+clang version 4.0.1 (tags/RELEASE_401/final)
+Target: x86_64-apple-darwin13.4.0
+Thread model: posix
+InstalledDir: /Users/yingshyanku/anaconda3/bin
+clang-4.0: warning: -Wl,-v: 'linker' input unused [-Wunused-command-line-argument]
+ "/Users/yingshyanku/anaconda3/bin/clang-4.0" -cc1 -triple x86_64-apple-macosx10.14.0 -Wdeprecated-objc-isa-usage -Werror=deprecated-objc-isa-usage -emit-obj -disable-free -disable-llvm-verifier -discard-value-names -main-file-name CMakeCCompilerABI.c -mrelocation-model pic -pic-level 2 -mthread-model posix -mdisable-fp-elim -masm-verbose -munwind-tables -target-cpu core2 -target-feature +ssse3 -target-linker-version 241.9 -v -dwarf-column-info -debugger-tuning=lldb -coverage-notes-file /Users/yingshyanku/Desktop/Marabou/build/CMakeFiles/CMakeTmp/CMakeFiles/cmTC_4512b.dir/CMakeCCompilerABI.c.gcno -resource-dir /Users/yingshyanku/anaconda3/bin/../lib/clang/4.0.1 -dependency-file CMakeFiles/cmTC_4512b.dir/CMakeCCompilerABI.c.o.d -sys-header-deps -MT CMakeFiles/cmTC_4512b.dir/CMakeCCompilerABI.c.o -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk -O2 -fdebug-compilation-dir /Users/yingshyanku/Desktop/Marabou/build/CMakeFiles/CMakeTmp -ferror-limit 19 -fmessage-length 0 -stack-protector 2 -fblocks -fobjc-runtime=macosx-10.14.0 -fencode-extended-block-signature -fmax-type-align=16 -fdiagnostics-show-option -vectorize-loops -vectorize-slp -o CMakeFiles/cmTC_4512b.dir/CMakeCCompilerABI.c.o -x c /usr/local/Cellar/cmake/3.22.1/share/cmake/Modules/CMakeCCompilerABI.c
+clang -cc1 version 4.0.1 based upon LLVM 4.0.1 default target x86_64-apple-darwin18.7.0
+ignoring nonexistent directory "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/Library/Frameworks"
+#include "..." search starts here:
+#include <...> search starts here:
+ /Users/yingshyanku/anaconda3/bin/../lib/clang/4.0.1/include
+ /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/usr/include
+ /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/System/Library/Frameworks (framework directory)
+End of search list.
+Linking C executable cmTC_4512b
+/usr/local/Cellar/cmake/3.22.1/bin/cmake -E cmake_link_script CMakeFiles/cmTC_4512b.dir/link.txt --verbose=1
+/Users/yingshyanku/anaconda3/bin/x86_64-apple-darwin13.4.0-clang -march=core2 -mtune=haswell -mssse3 -ftree-vectorize -fPIC -fPIE -fstack-protector-strong -O2 -pipe  -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk -mmacosx-version-min=10.14 -Wl,-search_paths_first -Wl,-headerpad_max_install_names -Wl,-pie -Wl,-headerpad_max_install_names -Wl,-dead_strip_dylibs -v -Wl,-v CMakeFiles/cmTC_4512b.dir/CMakeCCompilerABI.c.o -o cmTC_4512b 
+clang version 4.0.1 (tags/RELEASE_401/final)
+Target: x86_64-apple-darwin13.4.0
+Thread model: posix
+InstalledDir: /Users/yingshyanku/anaconda3/bin
+ "/Users/yingshyanku/anaconda3/bin/x86_64-apple-darwin13.4.0-ld" -demangle -lto_library /Users/yingshyanku/anaconda3/lib/libLTO.dylib -dynamic -arch x86_64 -macosx_version_min 10.14.0 -pie -syslibroot /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk -o cmTC_4512b -search_paths_first -headerpad_max_install_names -pie -headerpad_max_install_names -dead_strip_dylibs -v CMakeFiles/cmTC_4512b.dir/CMakeCCompilerABI.c.o -lSystem /Users/yingshyanku/anaconda3/bin/../lib/clang/4.0.1/lib/darwin/libclang_rt.osx.a
+@(#)PROGRAM:ld  PROJECT: ld64-274.2
+configured to support archs: armv6 armv7 armv7s arm64 i386 x86_64 x86_64h armv6m armv7k armv7m armv7em (tvOS)
+Library search paths:
+	/Users/yingshyanku/anaconda3/lib
+	/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/lib
+Framework search paths:
+	/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks/
+ld: warning: ignoring file /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/lib/libSystem.tbd, file was built for unsupported file format ( 0x2D 0x2D 0x2D 0x20 0x21 0x74 0x61 0x70 0x69 0x2D 0x74 0x62 0x64 0x2D 0x76 0x33 ) which is not the architecture being linked (x86_64): /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/lib/libSystem.tbd
+ld: dynamic main executables must link with libSystem.dylib for architecture x86_64
+clang-4.0: error: linker command failed with exit code 1 (use -v to see invocation)
+make[1]: *** [CMakeFiles/cmTC_4512b.dir/build.make:100: cmTC_4512b] Error 1
+make[1]: Leaving directory '/Users/yingshyanku/Desktop/Marabou/build/CMakeFiles/CMakeTmp'
+make: *** [Makefile:127: cmTC_4512b/fast] Error 2
+
+
+
+
+Determining if the C compiler works failed with the following output:
+Change Dir: /Users/yingshyanku/Desktop/Marabou/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/Users/yingshyanku/anaconda3/bin/make -f Makefile cmTC_7956e/fast && /Users/yingshyanku/anaconda3/bin/make  -f CMakeFiles/cmTC_7956e.dir/build.make CMakeFiles/cmTC_7956e.dir/build
+make[1]: Entering directory '/Users/yingshyanku/Desktop/Marabou/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_7956e.dir/testCCompiler.c.o
+/Users/yingshyanku/anaconda3/bin/x86_64-apple-darwin13.4.0-clang   -march=core2 -mtune=haswell -mssse3 -ftree-vectorize -fPIC -fPIE -fstack-protector-strong -O2 -pipe  -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk -mmacosx-version-min=10.14 -MD -MT CMakeFiles/cmTC_7956e.dir/testCCompiler.c.o -MF CMakeFiles/cmTC_7956e.dir/testCCompiler.c.o.d -o CMakeFiles/cmTC_7956e.dir/testCCompiler.c.o -c /Users/yingshyanku/Desktop/Marabou/build/CMakeFiles/CMakeTmp/testCCompiler.c
+Linking C executable cmTC_7956e
+/usr/local/Cellar/cmake/3.22.1/bin/cmake -E cmake_link_script CMakeFiles/cmTC_7956e.dir/link.txt --verbose=1
+/Users/yingshyanku/anaconda3/bin/x86_64-apple-darwin13.4.0-clang -march=core2 -mtune=haswell -mssse3 -ftree-vectorize -fPIC -fPIE -fstack-protector-strong -O2 -pipe  -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk -mmacosx-version-min=10.14 -Wl,-search_paths_first -Wl,-headerpad_max_install_names -Wl,-pie -Wl,-headerpad_max_install_names -Wl,-dead_strip_dylibs  CMakeFiles/cmTC_7956e.dir/testCCompiler.c.o -o cmTC_7956e 
+ld: warning: ignoring file /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/lib/libSystem.tbd, file was built for unsupported file format ( 0x2D 0x2D 0x2D 0x20 0x21 0x74 0x61 0x70 0x69 0x2D 0x74 0x62 0x64 0x2D 0x76 0x33 ) which is not the architecture being linked (x86_64): /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/lib/libSystem.tbd
+ld: dynamic main executables must link with libSystem.dylib for architecture x86_64
+clang-4.0: error: linker command failed with exit code 1 (use -v to see invocation)
+make[1]: *** [CMakeFiles/cmTC_7956e.dir/build.make:100: cmTC_7956e] Error 1
+make[1]: Leaving directory '/Users/yingshyanku/Desktop/Marabou/build/CMakeFiles/CMakeTmp'
+make: *** [Makefile:127: cmTC_7956e/fast] Error 2
+
+
+
