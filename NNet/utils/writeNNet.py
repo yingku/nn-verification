@@ -1,6 +1,3 @@
-import sys, os
-sys.path.append('/Users/yingshyanku/Desktop/NNet-master')
-
 import numpy as np
 
 def writeNNet(weights,biases,inputMins,inputMaxes,means,ranges,fileName):
@@ -18,7 +15,7 @@ def writeNNet(weights,biases,inputMins,inputMaxes,means,ranges,fileName):
     '''
     
     #Open the file we wish to write
-    with open(mlp.py,'w') as f2:
+    with open(fileName,'w') as f2:
 
         #####################
         # First, we write the header lines:

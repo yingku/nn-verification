@@ -1,6 +1,6 @@
 import unittest
-import sys, os
-sys.path.append('/Users/yingshyanku/Desktop/NNet-master')
+import sys
+sys.path.append('..')
 import numpy as np
 from NNet.python.nnet import NNet
 
