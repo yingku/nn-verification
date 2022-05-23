@@ -8,6 +8,9 @@ Install dependencies: `pip install pip install -r requirements.txt`
 The Lasagne version available on PyPi is out of date. Install it separately with
 `pip install --upgrade https://github.com/Lasagne/Lasagne/archive/5d3c63cb315c50b1cbd27a6bc8664b406f34dd99.zip`
 
+If you get an error like `ImportError: No module named TL4HDR.data.preProcess`, try setting the `PYTHONPATH` environment
+variable to the empty string. On Linux, `export PYTHONPATH=` has resolved this issue.
+
 ## Getting Started
 
 The model folder contains the files for deep neural network and deep transfer learning implementation.
