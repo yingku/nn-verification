@@ -3,9 +3,9 @@ import pandas as pd
 import random as rn
 import os
 
-from data.preProcess import get_one_race, get_n_years, standarize_dataset, get_dataset
-from data.tcga import read_data
-from examples.classify_util import run_mixture_cv, run_one_race_cv, \
+from TL4HDR.data.preProcess import get_one_race, get_n_years, standarize_dataset, get_dataset
+from TL4HDR.data.tcga import read_data
+from TL4HDR.examples.classify_util import run_mixture_cv, run_one_race_cv, \
     run_unsupervised_transfer_cv
 from tensorflow import set_random_seed
 

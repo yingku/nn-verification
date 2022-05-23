@@ -4,9 +4,9 @@ from sklearn.preprocessing import StandardScaler
 from statsmodels.robust import mad
 import numpy as np
 
-from data.preProcess import get_one_race, get_n_years
-from data.tcga import read_data
-from examples.classify_util import run_mixture_cv, run_one_race_cv, \
+from TL4HDR.data.preProcess import get_one_race, get_n_years
+from TL4HDR.data.tcga import read_data
+from TL4HDR.examples.classify_util import run_mixture_cv, run_one_race_cv, \
     run_unsupervised_transfer_cv
 
 def run_cv():

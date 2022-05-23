@@ -6,12 +6,12 @@ from sklearn.feature_selection import SelectKBest, f_classif
 from sklearn.metrics import roc_auc_score
 from sklearn.model_selection import train_test_split, StratifiedKFold, LeaveOneOut
 
-from data.preProcess import get_n_years
+from TL4HDR.data.preProcess import get_n_years
 import pandas as pd
 import numpy as np
 
-from model.CCSA import Initialization
-from model.mlp import get_k_best, MLP
+from TL4HDR.model.CCSA import Initialization
+from TL4HDR.model.mlp import get_k_best, MLP
 
 
 def run_cv(seed, fold, X, Y, R, y_strat, val_size=0, pretrain_set=None, batch_size=32, k=-1,

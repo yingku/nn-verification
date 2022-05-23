@@ -4,12 +4,12 @@ import random as rn
 import os
 from sklearn import preprocessing
 
-from data.preProcess import get_one_race_clf
-from examples.classify_util import run_mixture_cv, run_one_race_cv, \
+from TL4HDR.data.preProcess import get_one_race_clf
+from TL4HDR.examples.classify_util import run_mixture_cv, run_one_race_cv, \
     run_supervised_transfer_cv
 from tensorflow import set_random_seed
 
-from simulation.simulate_data_clf import SimulatedData
+from TL4HDR.simulation.simulate_data_clf import SimulatedData
 
 seed(11111)
 set_random_seed(11111)

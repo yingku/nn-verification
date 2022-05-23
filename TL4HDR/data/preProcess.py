@@ -3,7 +3,6 @@ import numpy as np
 import pandas as pd
 import os
 
-from pathlib import Path
 from sklearn import preprocessing
 from sklearn.feature_selection import VarianceThreshold
 from sklearn.preprocessing import StandardScaler

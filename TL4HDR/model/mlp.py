@@ -7,10 +7,10 @@ import theano.tensor as T
 from lasagne.nonlinearities import rectify
 from sklearn.feature_selection import SelectKBest, f_classif
 from sklearn.metrics import roc_auc_score
-from model.DropoutLayer import DropoutHiddenLayer
-from model.HiddenLayer import HiddenLayer
-from model.LogisticRegression import LogisticRegression
-from model.SdA import dA
+from TL4HDR.model.DropoutLayer import DropoutHiddenLayer
+from TL4HDR.model.HiddenLayer import HiddenLayer
+from TL4HDR.model.LogisticRegression import LogisticRegression
+from TL4HDR.model.SdA import dA
 
 
 class MLP(object):
