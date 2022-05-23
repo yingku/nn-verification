@@ -44,7 +44,7 @@ def run_cv():
                         sort=False, axis=1)
         print(df1)
         res = res.append(df1)
-    f_name = 'Result/MM-AA-EA-mRNA-OS-3YR.xlsx'
+    f_name = 'TL4HDR/Result/MM-AA-EA-mRNA-OS-3YR.xlsx'
     res.to_excel(f_name)
 
 def main():

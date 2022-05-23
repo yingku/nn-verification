@@ -71,7 +71,7 @@ def run_cv(cancer_type, feature_type, target, years=3, groups=("WHITE", "BLACK")
         print (df1)
         res = res.append(df1)
 
-    f_name = 'Result/' + cancer_type + '-AA-EA-' + feature_type[0] + '-' + target + '-' + str(years) + 'YR.xlsx'
+    f_name = 'TL4HDR/Result/' + cancer_type + '-AA-EA-' + feature_type[0] + '-' + target + '-' + str(years) + 'YR.xlsx'
     res.to_excel(f_name)
 
 

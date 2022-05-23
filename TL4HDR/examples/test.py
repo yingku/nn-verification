@@ -137,7 +137,7 @@ def main():
             print(index)
             df_m = run_cv(cancer, [feature], target, years=years, groups=("WHITE", "BLACK"))
             res = res.append(df_m)
-            save_to = './Result/' + str(index) + '.xlsx'
+            save_to = 'TL4HDR/Result/' + str(index) + '.xlsx'
             res.to_excel(save_to)
         except:
             continue
