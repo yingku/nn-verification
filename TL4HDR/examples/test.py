@@ -120,13 +120,13 @@ def main():
     res = pd.DataFrame()
     arguments = sys.argv
     print (arguments)
-    df = pd.read_csv('todo.csv', index_col='index')
+    df = pd.read_csv('TL4HDR/examples/todo.csv', index_col='index')
     df = df.sort_index()
     todo = [63, 64, 80, 81, 84, 85, 86, 87, 90, 91, 92, 111, 116, 123, 124, 132, 156, 159, 165, 166, 167, 169, 194, 201, 205, 208, 228, 234, 254, 272, 273, 275, 303, 381, 395, 396, 400, 401, 402, 403, 404, 405, 422, 427, 431, 435, 436]
     df = df.iloc[todo]
 
-    if not os.path.exists('./Result'):
-        os.makedirs('./Result')
+    if not os.path.exists('TL4HDR/Result'):
+        os.makedirs('TL4HDR/Result')
 
     for index, row in df.iterrows():
         cancer = row['cancer_type']
