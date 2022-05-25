@@ -262,6 +262,9 @@ def train_and_predict(X_train_target, y_train_target,
     best_score, best_Auc = Initialization.training_the_model(model, domain_adaptation_task, repetition, sample_per_class,batch_size,
                                                              X_val_target, Y_val_target,
                                                              X_test, y_test)
+                                                             
+    #output the model
+    print(model.summary())
 
     print('Best AUC for {} target sample per class and repetition {} is {}.'.format(sample_per_class,
                                                                                              repetition, best_Auc))
