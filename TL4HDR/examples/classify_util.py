@@ -5,9 +5,12 @@ from keras.optimizers import SGD
 from sklearn.feature_selection import SelectKBest, f_classif
 from sklearn.metrics import roc_auc_score
 from sklearn.model_selection import train_test_split, StratifiedKFold, LeaveOneOut
+from theano.compile.sharedvalue import SharedVariable
+from typing import List, Optional, Tuple, Union
 
 from TL4HDR.data.preProcess import get_n_years
 import pandas as pd
+import numbers
 import numpy as np
 
 from TL4HDR.model.CCSA import Initialization
@@ -16,7 +19,35 @@ from TL4HDR.model.mlp import get_k_best, MLP
 
 def run_cv(seed, fold, X, Y, R, y_strat, val_size=0, pretrain_set=None, batch_size=32, k=-1,
            learning_rate=0.01, lr_decay=0.0, dropout=0.5, n_epochs=100, momentum=0.9,
-           L1_reg=0.001, L2_reg=0.001, hiddenLayers=[128,64]):
+           L1_reg=0.001, L2_reg=0.001, hidden_layers=None):
+    # type: (int, numbers.Integral, np.ndarray, np.ndarray, np.ndarray, np.ndarray, Union[float, int], Optional[SharedVariable], int, int, float, float, float, int, float, float, float, Optional[List[int]]) -> Tuple[pd.DataFrame, List[MLP]]
+    """
+    Train and run a model
+    Args:
+        seed: source of entropy for split of training and testing data
+        fold:
+        X:
+        Y:
+        R:
+        y_strat:
+        val_size:
+        pretrain_set:
+        batch_size:
+        k:
+        learning_rate:
+        lr_decay:
+        dropout:
+        n_epochs:
+        momentum:
+        L1_reg:
+        L2_reg:
+        hidden_layers: array of sizes of hidden layers
+
+    Returns:
+
+    """
+    if hidden_layers is None:
+        hidden_layers = [128, 64]
 
     X_w = pretrain_set.get_value(borrow=True) if k > 0 and pretrain_set else None
 
@@ -50,7 +81,7 @@ def run_cv(seed, fold, X, Y, R, y_strat, val_size=0, pretrain_set=None, batch_si
 
         n_in = X_train.shape[1]
         classifier = MLP(n_in=n_in, learning_rate=learning_rate, lr_decay=lr_decay, dropout=dropout,
-                L1_reg=L1_reg, L2_reg=L2_reg, hidden_layers_sizes=hiddenLayers, momentum=momentum)
+                         L1_reg=L1_reg, L2_reg=L2_reg, hidden_layers_sizes=hidden_layers, momentum=momentum)
         if pretrain_set:
             pretrain_config = {'pt_batchsize': 32, 'pt_lr': 0.01, 'pt_epochs': 500, 'corruption_level': 0.3}
             classifier.pretrain(pretrain_set=pretrain_set, pretrain_config=pretrain_config)
@@ -71,7 +102,7 @@ def run_mixture_cv(seed, dataset, fold=3, k=-1, val_size=0, batch_size=32, momen
     X, Y, R, y_sub, y_strat = dataset
     df = run_cv(seed, fold, X, Y, R, y_strat, val_size=val_size, batch_size=batch_size, k=k, momentum=momentum,
                 learning_rate=learning_rate, lr_decay=lr_decay, dropout=dropout, n_epochs=n_epochs,
-                L1_reg=L1_reg, L2_reg=L2_reg, hiddenLayers=hiddenLayers)
+                L1_reg=L1_reg, L2_reg=L2_reg, hidden_layers=hiddenLayers)
     if save_to:
         df.to_csv(save_to)
     y_test, y_scr = list(df['Y'].values), list(df['scr'].values)
@@ -95,7 +126,7 @@ def run_one_race_cv(seed, dataset, fold=3,  k=-1, val_size=0, batch_size=32,
     X, Y, R, y_sub, y_strat = dataset
     df = run_cv(seed, fold, X, Y, R, y_strat, val_size=val_size, batch_size=batch_size, k=k,
                 learning_rate=learning_rate, lr_decay=lr_decay, dropout=dropout,
-                L1_reg=L1_reg, L2_reg=L2_reg, hiddenLayers=hiddenLayers)
+                L1_reg=L1_reg, L2_reg=L2_reg, hidden_layers=hiddenLayers)
     if save_to:
         df.to_csv(save_to)
     y_test, y_scr = list(df['Y'].values), list(df['scr'].values)
@@ -108,6 +139,9 @@ def run_CCSA_transfer(seed, dataset, n_features, fold=3, alpha=0.25, learning_ra
                       hiddenLayers=[100, 50], dr=0.5, groups=("WHITE", "BLACK"),
                       momentum=0.0, decay=0, batch_size=32,
                       sample_per_class=2, repetition=1):
+    """
+    Train and run a model using transfer learning
+    """
     X, Y, R, y_sub, y_strat = dataset
     df = pd.DataFrame(X)
     df['R'] = R
@@ -176,7 +210,7 @@ def run_CCSA_transfer(seed, dataset, n_features, fold=3, alpha=0.25, learning_ra
     return df
 
 
-# let's run the experiments when 1 target sample per calss is available in training.
+# let's run the experiments when 1 target sample per class is available in training.
 # you can run the experiments for sample_per_class=1, ... , 7.
 # sample_per_class = 2
 # Running the experiments for repetition 5. In the paper we reported the average acuracy.
@@ -245,7 +279,7 @@ def run_unsupervised_transfer_cv(seed, dataset, fold=3, val_size=0, k=-1, batch_
     df = run_cv(seed, fold, X_b, y_b, R_b, y_strat_b, pretrain_set=pretrain_set,
                 val_size=val_size, batch_size=batch_size, k=k, n_epochs=n_epochs,
                 learning_rate=learning_rate, lr_decay=lr_decay, dropout=dropout,
-                L1_reg=L1_reg, L2_reg=L2_reg, hiddenLayers=hiddenLayers)
+                L1_reg=L1_reg, L2_reg=L2_reg, hidden_layers=hiddenLayers)
     if save_to:
         df.to_csv(save_to)
     y_test, y_scr = list(df['Y'].values), list(df['scr'].values)
