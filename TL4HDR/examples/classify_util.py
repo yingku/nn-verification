@@ -6,7 +6,7 @@ from sklearn.feature_selection import SelectKBest, f_classif
 from sklearn.metrics import roc_auc_score
 from sklearn.model_selection import train_test_split, StratifiedKFold, LeaveOneOut
 from theano.compile.sharedvalue import SharedVariable
-from typing import List, Optional, Tuple, Union
+from typing import Dict, List, Optional, Tuple, Union
 
 from TL4HDR.data.preProcess import get_n_years
 import pandas as pd
@@ -55,6 +55,7 @@ def run_cv(seed, fold, X, Y, R, y_strat, val_size=0, pretrain_set=None, batch_si
     columns = list(range(m))
     columns.extend(['scr', 'R', 'Y'])
     df = pd.DataFrame(columns=columns)
+    classifiers = []
     kf = StratifiedKFold(n_splits=fold, shuffle=True, random_state=seed)
     for train_index, test_index in kf.split(X, y_strat):
         X_train, X_test = X[train_index], X[test_index]
@@ -93,16 +94,21 @@ def run_cv(seed, fold, X, Y, R, y_strat, val_size=0, pretrain_set=None, batch_si
         array1 = np.column_stack((X_test, X_scr[:,1], R_test, Y_test))
         df_temp1 = pd.DataFrame(array1, index=list(test_index), columns=columns)
         df = df.append(df_temp1)
+        classifiers.append(classifier)
 
-    return df
+    return df, classifiers
+
 
 def run_mixture_cv(seed, dataset, fold=3, k=-1, val_size=0, batch_size=32, momentum=0.9,
                    learning_rate=0.01, lr_decay=0.0, dropout=0.5, n_epochs=100, save_to=None,
-                   L1_reg=0.001, L2_reg=0.001, hiddenLayers=[128, 64], groups=("WHITE", "BLACK")):
+                   L1_reg=0.001, L2_reg=0.001, hidden_layers=None, groups=("WHITE", "BLACK")):
+    # type: (int, Dict[str, Union[np.ndarray, List]], numbers.Integral, int, Union[float, int], int, float, float, float, float, int, Optional[str], float, float, Optional[List[int]], Tuple[str, str]) -> Tuple[pd.DataFrame, List[MLP]]
+    if hidden_layers is None:
+        hidden_layers = [128, 64]
     X, Y, R, y_sub, y_strat = dataset
-    df = run_cv(seed, fold, X, Y, R, y_strat, val_size=val_size, batch_size=batch_size, k=k, momentum=momentum,
-                learning_rate=learning_rate, lr_decay=lr_decay, dropout=dropout, n_epochs=n_epochs,
-                L1_reg=L1_reg, L2_reg=L2_reg, hidden_layers=hiddenLayers)
+    df, classifiers = run_cv(seed, fold, X, Y, R, y_strat, val_size=val_size, batch_size=batch_size, k=k, momentum=momentum,
+                             learning_rate=learning_rate, lr_decay=lr_decay, dropout=dropout, n_epochs=n_epochs,
+                             L1_reg=L1_reg, L2_reg=L2_reg, hidden_layers=hidden_layers)
     if save_to:
         df.to_csv(save_to)
     y_test, y_scr = list(df['Y'].values), list(df['scr'].values)
@@ -118,22 +124,27 @@ def run_mixture_cv(seed, dataset, fold=3, k=-1, val_size=0, batch_size=32, momen
     res = {'folds': fold, 'A_Auc': A_CI,
            'W_Auc': W_CI, 'B_Auc': B_CI}
     df = pd.DataFrame(res, index=[seed])
-    return df
+    return df, classifiers
 
-def run_one_race_cv(seed, dataset, fold=3,  k=-1, val_size=0, batch_size=32,
+
+def run_one_race_cv(seed, dataset, fold=3, k=-1, val_size=0, batch_size=32,
                     learning_rate=0.01, lr_decay=0.0, dropout=0.5, save_to=None,
-                    L1_reg=0.001, L2_reg=0.001, hiddenLayers=[128, 64]):
+                    L1_reg=0.001, L2_reg=0.001, hidden_layers=None):
+    # type: (int, Dict[str, Union[np.ndarray, List]], numbers.Integral, int, Union[float, int], int, float, float, float, Optional[str], float, float, Optional[List[int]], Tuple[str, str]) -> Tuple[pd.DataFrame, List[MLP]]
+    if hidden_layers is None:
+        hidden_layers = [128, 64]
     X, Y, R, y_sub, y_strat = dataset
-    df = run_cv(seed, fold, X, Y, R, y_strat, val_size=val_size, batch_size=batch_size, k=k,
+    df, classifiers = run_cv(seed, fold, X, Y, R, y_strat, val_size=val_size, batch_size=batch_size, k=k,
                 learning_rate=learning_rate, lr_decay=lr_decay, dropout=dropout,
-                L1_reg=L1_reg, L2_reg=L2_reg, hidden_layers=hiddenLayers)
+                L1_reg=L1_reg, L2_reg=L2_reg, hidden_layers=hidden_layers)
     if save_to:
         df.to_csv(save_to)
     y_test, y_scr = list(df['Y'].values), list(df['scr'].values)
     A_CI = roc_auc_score(y_test, y_scr)
     res = {'folds': fold, 'Auc': A_CI}
     df = pd.DataFrame(res, index=[seed])
-    return df
+    return df, classifiers
+
 
 def run_CCSA_transfer(seed, dataset, n_features, fold=3, alpha=0.25, learning_rate = 0.01,
                       hiddenLayers=[100, 50], dr=0.5, groups=("WHITE", "BLACK"),
@@ -167,6 +178,7 @@ def run_CCSA_transfer(seed, dataset, n_features, fold=3, alpha=0.25, learning_ra
         n_features = X_test.shape[1]
 
     df_score = pd.DataFrame(columns=['scr', 'Y'])
+    models = []
     kf = StratifiedKFold(n_splits=fold, random_state=seed)
     for train_index, test_index in kf.split(X_test, Y_test):
         X_train_target_full, X_test_target = X_test[train_index], X_test[test_index]
@@ -185,7 +197,7 @@ def run_CCSA_transfer(seed, dataset, n_features, fold=3, alpha=0.25, learning_ra
         X_val_target = [e for idx, e in enumerate(X_train_target_full) if idx not in target_samples]
         Y_val_target = [e for idx, e in enumerate(Y_train_target_full) if idx not in target_samples]
 
-        best_score, best_Auc = train_and_predict(X_train_target, Y_train_target,
+        best_score, best_Auc, model = train_and_predict(X_train_target, Y_train_target,
                                      X_train_source, Y_train_source,
                                      X_val_target, Y_val_target,
                                      X_test_target, Y_test_target,
@@ -203,11 +215,12 @@ def run_CCSA_transfer(seed, dataset, n_features, fold=3, alpha=0.25, learning_ra
         array = np.column_stack((best_score, Y_test_target))
         df_temp = pd.DataFrame(array, index=list(test_index), columns=['scr', 'Y'])
         df_score = df_score.append(df_temp)
+        models.append(model)
 
     auc = roc_auc_score(df_score['Y'].values, df_score['scr'].values)
     res = {'TL_Auc': auc}
     df = pd.DataFrame(res, index=[seed])
-    return df
+    return df, models
 
 
 # let's run the experiments when 1 target sample per class is available in training.
@@ -265,14 +278,14 @@ def train_and_predict(X_train_target, y_train_target,
                                                              
     #print the model
     print(model.summary())
-    
+
     #plot the model
     plot_model(model, to_file='model_plot.png', show_shapes = True,
     show_layer_names = True)
 
     print('Best AUC for {} target sample per class and repetition {} is {}.'.format(sample_per_class,
                                                                                              repetition, best_Auc))
-    return best_score, best_Auc
+    return best_score, best_Auc, model
 
 
 def run_unsupervised_transfer_cv(seed, dataset, fold=3, val_size=0, k=-1, batch_size=32, save_to=None,
@@ -283,7 +296,7 @@ def run_unsupervised_transfer_cv(seed, dataset, fold=3, val_size=0, k=-1, batch_
     X_b, y_b, R_b, y_strat_b = X[idx], Y[idx], R[idx], y_strat[idx]
     pretrain_set = theano.shared(X, name='pretrain_set', borrow=True)
 
-    df = run_cv(seed, fold, X_b, y_b, R_b, y_strat_b, pretrain_set=pretrain_set,
+    df, classifiers = run_cv(seed, fold, X_b, y_b, R_b, y_strat_b, pretrain_set=pretrain_set,
                 val_size=val_size, batch_size=batch_size, k=k, n_epochs=n_epochs,
                 learning_rate=learning_rate, lr_decay=lr_decay, dropout=dropout,
                 L1_reg=L1_reg, L2_reg=L2_reg, hidden_layers=hiddenLayers)
@@ -293,7 +306,7 @@ def run_unsupervised_transfer_cv(seed, dataset, fold=3, val_size=0, k=-1, batch_
     A_CI = roc_auc_score(y_test, y_scr)
     res = {'folds': fold, 'TL_Auc': A_CI}
     df = pd.DataFrame(res, index=[seed])
-    return df
+    return df, classifiers
 
 def run_supervised_transfer_cv(seed, dataset, fold=3, val_size=0, k=-1, batch_size=32, groups=('WHITE', 'BLACK'),
                     learning_rate=0.01, lr_decay=0.0, dropout=0.5, tune_epoch=200, tune_lr=0.002, train_epoch=1000,
@@ -306,6 +319,7 @@ def run_supervised_transfer_cv(seed, dataset, fold=3, val_size=0, k=-1, batch_si
     pretrain_set = (X_w, y_w)
 
     df = pd.DataFrame(columns=['scr', 'R', 'Y'])
+    classifiers = []
     kf = StratifiedKFold(n_splits=fold, shuffle=True, random_state=seed)
     for train_index, test_index in kf.split(X_b, y_strat_b):
         X_train, X_test = X_b[train_index], X_b[test_index]
@@ -339,9 +353,10 @@ def run_supervised_transfer_cv(seed, dataset, fold=3, val_size=0, k=-1, batch_si
         array = np.column_stack((scr[:, 1], R_test, Y_test))
         df_temp = pd.DataFrame(array, index=list(test_index), columns=['scr', 'R', 'Y'])
         df = df.append(df_temp)
+        classifiers.append(classifier)
 
     y_test, y_scr = list(df['Y'].values), list(df['scr'].values)
     A_CI = roc_auc_score(y_test, y_scr)
     res = {'folds': fold, 'TL_Auc': A_CI}
     df = pd.DataFrame(res, index=[seed])
-    return df
+    return df, classifiers

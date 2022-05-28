@@ -86,18 +86,18 @@ def run_cv(cancer_type, feature_type, target, years=3, groups=("WHITE", "BLACK")
     res = pd.DataFrame()
     for i in range(20):
         seed = i
-        df_m = run_mixture_cv(seed, dataset, **parametrs_mix)
-        df_w = run_one_race_cv(seed, dataset_w, **parametrs_w)
+        df_m, _mixture_classifiers = run_mixture_cv(seed, dataset, **parametrs_mix)
+        df_w, _w_classifiers = run_one_race_cv(seed, dataset_w, **parametrs_w)
         df_w = df_w.rename(columns={"Auc": "W_ind"})
-        df_b = run_one_race_cv(seed, dataset_b, **parametrs_b)
+        df_b, _b_classifiers = run_one_race_cv(seed, dataset_b, **parametrs_b)
         df_b = df_b.rename(columns={"Auc": "B_ind"})
-        df_tl_supervised = run_supervised_transfer_cv(seed, dataset, **parametrs_tl)
+        df_tl_supervised, _supervised_transfer_classifiers = run_supervised_transfer_cv(seed, dataset, **parametrs_tl)
         df_tl_supervised = df_tl_supervised.rename(columns={"TL_Auc": "XY_TL"})
 
-        df_tl_unsupervised = run_unsupervised_transfer_cv(seed, dataset, **parametrs_tl_unsupervised)
+        df_tl_unsupervised, _unsupervised_transfer_classifiers = run_unsupervised_transfer_cv(seed, dataset, **parametrs_tl_unsupervised)
         df_tl_unsupervised = df_tl_unsupervised.rename(columns={"TL_Auc": "X_TL"})
 
-        df_tl = run_CCSA_transfer(seed, dataset_tl, **parameters_CCSA)
+        df_tl, _ccsa_transfer_classifiers = run_CCSA_transfer(seed, dataset_tl, **parameters_CCSA)
         df_tl = df_tl.rename(columns={"TL_Auc": "CCSA_TL"})
 
         df1 = pd.concat([df_m, df_w['W_ind'], df_b['B_ind'], df_tl['CCSA_TL'],

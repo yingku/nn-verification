@@ -9,6 +9,7 @@ from TL4HDR.data.tcga import read_data
 from TL4HDR.examples.classify_util import run_mixture_cv, run_one_race_cv, \
     run_unsupervised_transfer_cv
 
+
 def run_cv():
     dataset = read_data('MMRF', 'mRNA', 'OS', 3)
     dataset_w = get_one_race(dataset, 'WHITE')
@@ -33,12 +34,12 @@ def run_cv():
     res = pd.DataFrame()
     for i in range(20):
         seed = i
-        df_m = run_mixture_cv(seed, dataset, fold=3)
-        df_w = run_one_race_cv(seed, dataset_w, fold=3)
+        df_m, _mixture_classifiers = run_mixture_cv(seed, dataset, fold=3)
+        df_w, _w_classifiers = run_one_race_cv(seed, dataset_w, fold=3)
         df_w = df_w.rename(columns={"Auc": "W_ind"})
-        df_b = run_one_race_cv(seed, dataset_b, **parametrs_b)
+        df_b, _b_classifiers = run_one_race_cv(seed, dataset_b, **parametrs_b)
         df_b = df_b.rename(columns={"Auc": "B_ind"})
-        df_tl = run_unsupervised_transfer_cv(seed, dataset, fold=3)
+        df_tl, _unsupervised_transfer_classifiers = run_unsupervised_transfer_cv(seed, dataset, fold=3)
 
         df1 = pd.concat([df_m, df_w['W_ind'], df_b['B_ind'], df_tl['TL_Auc']],
                         sort=False, axis=1)
@@ -47,8 +48,10 @@ def run_cv():
     f_name = 'TL4HDR/Result/MM-AA-EA-mRNA-OS-3YR.xlsx'
     res.to_excel(f_name)
 
+
 def main():
     run_cv()
+
 
 if __name__ == '__main__':
     main()

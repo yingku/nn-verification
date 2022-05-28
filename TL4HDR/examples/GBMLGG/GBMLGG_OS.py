@@ -61,12 +61,12 @@ def run_cv(cancer_type, feature_type, target, years=3):
     res = pd.DataFrame()
     for i in range(20):
         seed = i
-        df_m = run_mixture_cv(seed, dataset, **parametrs_mix)
+        df_m, _mixture_classifiers = run_mixture_cv(seed, dataset, **parametrs_mix)
         df_w = run_one_race_cv(seed, dataset_w, **parametrs_w)
-        df_w = df_w.rename(columns={"Auc": "W_ind"})
+        df_w, _w_classifiers = df_w.rename(columns={"Auc": "W_ind"})
         df_b = run_one_race_cv(seed, dataset_b, **parametrs_b)
-        df_b = df_b.rename(columns={"Auc": "B_ind"})
-        df_tl = run_CCSA_transfer(seed, dataset_tl, **parameters_CCSA)
+        df_b, _b_classifiers = df_b.rename(columns={"Auc": "B_ind"})
+        df_tl, _ccsa_transfer_classifiers = run_CCSA_transfer(seed, dataset_tl, **parameters_CCSA)
 
         df1 = pd.concat([df_m, df_w['W_ind'], df_b['B_ind'], df_tl['TL_Auc']],
                         sort=False, axis=1)

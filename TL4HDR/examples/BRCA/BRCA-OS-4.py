@@ -15,8 +15,8 @@ os.environ['PYTHONHASHSEED'] = '0'
 os.environ["KERAS_BACKEND"] = "tensorflow"
 rn.seed(11111)
 
-def run_cv(cancer_type, feature_type, target, years=3):
 
+def run_cv(cancer_type, feature_type, target, years=3):
     print (cancer_type, feature_type, target, years)
     dataset = get_dataset(cancer_type=cancer_type, feature_type=feature_type, target=target, groups=("WHITE", "BLACK"))
     # dataset = read_data(cancer_type, feature_type[0], target, years)
@@ -55,12 +55,12 @@ def run_cv(cancer_type, feature_type, target, years=3):
     res = pd.DataFrame()
     for i in range(20):
         seed = i
-        df_m = run_mixture_cv(seed, dataset, **parametrs_mix)
-        df_w = run_one_race_cv(seed, dataset_w, **parametrs_w)
+        df_m, _mixture_classifiers = run_mixture_cv(seed, dataset, **parametrs_mix)
+        df_w, _w_classifiers = run_one_race_cv(seed, dataset_w, **parametrs_w)
         df_w = df_w.rename(columns={"Auc": "W_ind"})
-        df_b = run_one_race_cv(seed, dataset_b, **parametrs_b)
+        df_b, _b_classifiers = run_one_race_cv(seed, dataset_b, **parametrs_b)
         df_b = df_b.rename(columns={"Auc": "B_ind"})
-        df_tl = run_unsupervised_transfer_cv(seed, dataset, **parametrs_tl_sa)
+        df_tl, _unsupervised_transfer_classifiers = run_unsupervised_transfer_cv(seed, dataset, **parametrs_tl_sa)
 
         df1 = pd.concat([df_m, df_w['W_ind'], df_b['B_ind'], df_tl['TL_Auc']],
                         sort=False, axis=1)
@@ -73,6 +73,7 @@ def run_cv(cancer_type, feature_type, target, years=3):
 
 def main():
     run_cv('BRCA', 'Protein', 'OS', years=4)
+
 
 if __name__ == '__main__':
     main()
