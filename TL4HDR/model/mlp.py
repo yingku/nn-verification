@@ -378,9 +378,7 @@ class MLP(object):
                 updates={lr: lr * (1 / (1 + self.lr_decay))})
             decay_learning_rate()
 
-
     def get_score(self, X, is_train=0):
-
         score = theano.function(
             on_unused_input='ignore',
             inputs=[self.X, self.is_train],
