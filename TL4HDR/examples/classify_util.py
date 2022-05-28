@@ -263,10 +263,10 @@ def train_and_predict(X_train_target, y_train_target,
                                                              X_val_target, Y_val_target,
                                                              X_test, y_test)
                                                              
-    #output the model
+    #print the model
     print(model.summary())
     
-    #print the model
+    #plot the model
     plot_model(model, to_file='model_plot.png', show_shapes = True,
     show_layer_names = True)
 
