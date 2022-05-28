@@ -1,0 +1,8 @@
+*.pyc
+/.ipynb_checkpoints
+.DS_Store
+.idea
+/CCSA_pairs
+
+/TL4HDR/Result/*.xlsx
+/TL4HDR/Result/*.txt
