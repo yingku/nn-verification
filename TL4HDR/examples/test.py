@@ -1,13 +1,15 @@
-from numpy.random import seed
-import pandas as pd
+import os
 import random as rn
-import os, sys
+import sys
 
-from TL4HDR.data.preProcess import get_one_race, get_n_years, normalize_dataset, get_dataset_integ, \
+import pandas as pd
+from numpy.random import seed
+from tensorflow import set_random_seed
+
+from TL4HDR.data.preProcess import get_one_race, get_n_years, normalize_dataset, \
     standarize_dataset, get_dataset
 from TL4HDR.examples.classify_util import run_mixture_cv, run_one_race_cv, \
     run_unsupervised_transfer_cv, run_supervised_transfer_cv, run_CCSA_transfer
-from tensorflow import set_random_seed
 
 seed(11111)
 set_random_seed(11111)
@@ -15,13 +17,12 @@ os.environ['PYTHONHASHSEED'] = '0'
 os.environ["KERAS_BACKEND"] = "tensorflow"
 rn.seed(11111)
 
-
 pd.set_option('display.width', 1000)
 pd.options.display.max_columns = 1000
 pd.options.display.max_rows = 1000
 
-def run_cv(cancer_type, feature_type, target, years=3, groups=("WHITE", "BLACK")):
 
+def run_cv(cancer_type, feature_type, target, years=3, groups=("WHITE", "BLACK")):
     print (cancer_type, feature_type, target, years)
     # dataset = get_dataset_integ(cancer_type=cancer_type, feature_type=feature_type, target=target, groups=groups)
     dataset = get_dataset(cancer_type=cancer_type, feature_type=feature_type, target=target, groups=groups)
@@ -97,7 +98,7 @@ def run_cv(cancer_type, feature_type, target, years=3, groups=("WHITE", "BLACK")
         df_tl_unsupervised, _unsupervised_transfer_classifiers = run_unsupervised_transfer_cv(seed, dataset, **parametrs_tl_unsupervised)
         df_tl_unsupervised = df_tl_unsupervised.rename(columns={"TL_Auc": "X_TL"})
 
-        df_tl, _ccsa_transfer_classifiers = run_CCSA_transfer(seed, dataset_tl, **parameters_CCSA)
+        df_tl, _ccsa_transfer_models = run_CCSA_transfer(seed, dataset_tl, **parameters_CCSA)
         df_tl = df_tl.rename(columns={"TL_Auc": "CCSA_TL"})
 
         df1 = pd.concat([df_m, df_w['W_ind'], df_b['B_ind'], df_tl['CCSA_TL'],
@@ -116,7 +117,6 @@ def run_cv(cancer_type, feature_type, target, years=3, groups=("WHITE", "BLACK")
 
 
 def main():
-
     res = pd.DataFrame()
     arguments = sys.argv
     print (arguments)
