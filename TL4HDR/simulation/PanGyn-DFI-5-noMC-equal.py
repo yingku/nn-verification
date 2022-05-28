@@ -44,18 +44,18 @@ def run_cv():
 
     parametrs_mix = {'fold': 3, 'k': k, 'val_size': 0.0, 'batch_size': 20, 'momentum': 0.9,
                      'learning_rate': 0.01, 'lr_decay': 0.0, 'dropout': 0.5,
-                     'L1_reg': 0.001, 'L2_reg': 0.001, 'hiddenLayers': [128, 64]}
+                     'L1_reg': 0.001, 'L2_reg': 0.001, 'hidden_layers': [128, 64]}
     parametrs_w = {'fold': 3, 'k': k, 'val_size':0.0, 'batch_size':20,
                      'learning_rate':0.01, 'lr_decay':0.0, 'dropout':0.5,
-                     'L1_reg': 0.001, 'L2_reg': 0.001, 'hiddenLayers': [128, 64]}
+                     'L1_reg': 0.001, 'L2_reg': 0.001, 'hidden_layers': [128, 64]}
 
     parametrs_b = {'fold': 3, 'k': k, 'val_size': 0.0, 'batch_size': 20,
                    'learning_rate': 0.01, 'lr_decay': 0.0, 'dropout': 0.5,
-                   'L1_reg': 0.001, 'L2_reg': 0.001, 'hiddenLayers': [128, 64]}
+                   'L1_reg': 0.001, 'L2_reg': 0.001, 'hidden_layers': [128, 64]}
 
     parametrs_tl = {'fold': 3, 'k': k, 'val_size': 0.0, 'batch_size': 32, 'train_epoch': 100, 'tune_epoch': 100,
                     'learning_rate': 0.01, 'lr_decay': 0.0, 'dropout': 0.5, 'tune_lr': 0.001,
-                    'L1_reg': 0.001, 'L2_reg': 0.001, 'hiddenLayers': [128, 64], 'tune_batch': 32}
+                    'L1_reg': 0.001, 'L2_reg': 0.001, 'hidden_layers': [128, 64], 'tune_batch': 32}
 
     res = pd.DataFrame()
     for i in range(20):

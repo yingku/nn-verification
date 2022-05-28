@@ -2,6 +2,7 @@ import theano
 from keras import Input, Model
 from keras.layers import Dropout, Dense, Activation, Lambda
 from keras.optimizers import SGD
+from keras.utils import plot_model
 from sklearn.feature_selection import SelectKBest, f_classif
 from sklearn.metrics import roc_auc_score
 from sklearn.model_selection import train_test_split, StratifiedKFold, LeaveOneOut
@@ -147,7 +148,7 @@ def run_one_race_cv(seed, dataset, fold=3, k=-1, val_size=0, batch_size=32,
 
 
 def run_CCSA_transfer(seed, dataset, n_features, fold=3, alpha=0.25, learning_rate = 0.01,
-                      hiddenLayers=[100, 50], dr=0.5, groups=("WHITE", "BLACK"),
+                      hidden_layers=[100, 50], dr=0.5, groups=("WHITE", "BLACK"),
                       momentum=0.0, decay=0, batch_size=32,
                       sample_per_class=2, repetition=1):
     """
@@ -203,7 +204,7 @@ def run_CCSA_transfer(seed, dataset, n_features, fold=3, alpha=0.25, learning_ra
                                      X_test_target, Y_test_target,
                                      sample_per_class=sample_per_class,
                                      alpha=alpha, learning_rate=learning_rate,
-                                     hiddenLayers=hiddenLayers, dr=dr,
+                                     hidden_layers=hidden_layers, dr=dr,
                                      momentum=momentum, decay=decay,
                                      batch_size=batch_size,
                                      repetition=repetition,
@@ -235,7 +236,7 @@ def train_and_predict(X_train_target, y_train_target,
                       X_test, y_test,
                       repetition, sample_per_class,
                       alpha=0.25, learning_rate = 0.01,
-                      hiddenLayers=[100, 50], dr=0.5,
+                      hidden_layers=[100, 50], dr=0.5,
                       momentum=0.0, decay=0, batch_size=32,
                       n_features = 400):
     # size of input variable for each patient
@@ -250,7 +251,7 @@ def train_and_predict(X_train_target, y_train_target,
     alpha = alpha
 
     # Having two streams. One for source and one for target.
-    model1 = Initialization.Create_Model(hiddenLayers=hiddenLayers, dr=dr)
+    model1 = Initialization.Create_Model(hidden_layers=hidden_layers, dr=dr)
     processed_a = model1(input_a)
     processed_b = model1(input_b)
 
@@ -290,7 +291,7 @@ def train_and_predict(X_train_target, y_train_target,
 
 def run_unsupervised_transfer_cv(seed, dataset, fold=3, val_size=0, k=-1, batch_size=32, save_to=None,
                     learning_rate=0.01, lr_decay=0.0, dropout=0.5, n_epochs=100, target='BLACK',
-                    L1_reg=0.001, L2_reg=0.001, hiddenLayers=[128, 64]):
+                    L1_reg=0.001, L2_reg=0.001, hidden_layers=[128, 64]):
     X, Y, R, y_sub, y_strat = dataset
     idx = R == target
     X_b, y_b, R_b, y_strat_b = X[idx], Y[idx], R[idx], y_strat[idx]
@@ -299,7 +300,7 @@ def run_unsupervised_transfer_cv(seed, dataset, fold=3, val_size=0, k=-1, batch_
     df, classifiers = run_cv(seed, fold, X_b, y_b, R_b, y_strat_b, pretrain_set=pretrain_set,
                 val_size=val_size, batch_size=batch_size, k=k, n_epochs=n_epochs,
                 learning_rate=learning_rate, lr_decay=lr_decay, dropout=dropout,
-                L1_reg=L1_reg, L2_reg=L2_reg, hidden_layers=hiddenLayers)
+                L1_reg=L1_reg, L2_reg=L2_reg, hidden_layers=hidden_layers)
     if save_to:
         df.to_csv(save_to)
     y_test, y_scr = list(df['Y'].values), list(df['scr'].values)
@@ -310,7 +311,7 @@ def run_unsupervised_transfer_cv(seed, dataset, fold=3, val_size=0, k=-1, batch_
 
 def run_supervised_transfer_cv(seed, dataset, fold=3, val_size=0, k=-1, batch_size=32, groups=('WHITE', 'BLACK'),
                     learning_rate=0.01, lr_decay=0.0, dropout=0.5, tune_epoch=200, tune_lr=0.002, train_epoch=1000,
-                    L1_reg=0.001, L2_reg=0.001, hiddenLayers=[128, 64], tune_batch=10):
+                    L1_reg=0.001, L2_reg=0.001, hidden_layers=[128, 64], tune_batch=10):
     X, Y, R, y_sub, y_strat = dataset
     idx = R == groups[1]
     X_b, y_b, R_b, y_strat_b = X[idx], Y[idx], R[idx], y_strat[idx]
@@ -344,7 +345,7 @@ def run_supervised_transfer_cv(seed, dataset, fold=3, val_size=0, k=-1, batch_si
 
         n_in = X_train.shape[1]
         classifier = MLP(n_in=n_in, learning_rate=learning_rate, lr_decay=lr_decay, dropout=dropout,
-                L1_reg=L1_reg, L2_reg=L2_reg, hidden_layers_sizes=hiddenLayers)
+                L1_reg=L1_reg, L2_reg=L2_reg, hidden_layers_sizes=hidden_layers)
         classifier.train(pretrain_set, n_epochs=train_epoch, batch_size=batch_size)
         classifier.learning_rate = tune_lr
         classifier.tune(train_data, valid_data=valid_data, batch_size=tune_batch, n_epochs=tune_epoch)

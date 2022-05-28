@@ -29,7 +29,7 @@ def run_cv():
     k=-1
     parametrs_b = {'fold': 3, 'k': k, 'val_size':0.0, 'batch_size':4,
                      'learning_rate':0.01, 'lr_decay':0.0, 'dropout':0.5,
-                     'L1_reg': 0.001, 'L2_reg': 0.001, 'hiddenLayers': [128, 64]}
+                     'L1_reg': 0.001, 'L2_reg': 0.001, 'hidden_layers': [128, 64]}
 
     res = pd.DataFrame()
     for i in range(20):

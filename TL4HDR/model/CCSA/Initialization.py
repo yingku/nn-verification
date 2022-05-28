@@ -81,10 +81,10 @@ def Create_Pairs(domain_adaptation_task,repetition,sample_per_class,
     np.save('./CCSA_pairs/' + UM + '_yc_count_' + str(cc) + '_SpC_' + str(SpC) + '.npy', yc)
 
 
-def Create_Model(hiddenLayers=[100, 50], dr=0.5):
+def Create_Model(hidden_layers=[100, 50], dr=0.5):
 
     model = Sequential()
-    for idx, nodes in enumerate(hiddenLayers):
+    for idx, nodes in enumerate(hidden_layers):
         model.add(Dense(nodes))
         model.add(Activation('relu'))
         if dr > 0:

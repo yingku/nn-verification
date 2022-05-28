@@ -40,17 +40,17 @@ def run_cv(cancer_type, feature_type, target, years=3):
 
     parametrs_mix = {'fold': 3, 'k': k, 'val_size':0.0, 'batch_size':20, 'n_epochs':100,
                      'learning_rate':0.01, 'lr_decay':0.0, 'dropout':0.5,
-                     'L1_reg': 0.001, 'L2_reg': 0.001, 'hiddenLayers': [128, 64]}
+                     'L1_reg': 0.001, 'L2_reg': 0.001, 'hidden_layers': [128, 64]}
     parametrs_w = {'fold': 3, 'k': k, 'val_size':0.0, 'batch_size':20,
                      'learning_rate':0.01, 'lr_decay':0.0, 'dropout':0.5,
-                     'L1_reg': 0.001, 'L2_reg': 0.001, 'hiddenLayers': [128, 64]}
+                     'L1_reg': 0.001, 'L2_reg': 0.001, 'hidden_layers': [128, 64]}
     parametrs_b = {'fold': 3, 'k': k, 'val_size':0.0, 'batch_size':4,
                      'learning_rate':0.01, 'lr_decay':0.0, 'dropout':0.5,
-                     'L1_reg': 0.001, 'L2_reg': 0.001, 'hiddenLayers': [4, 2]}
+                     'L1_reg': 0.001, 'L2_reg': 0.001, 'hidden_layers': [4, 2]}
 
     parametrs_tl = {'fold': 3, 'k': k, 'val_size': 0.0, 'batch_size': 32, 'tune_epoch': 20, 'train_epoch': 50,
                     'learning_rate': 0.01, 'lr_decay': 0.0, 'dropout': 0.5, 'tune_lr': 0.0001,
-                    'L1_reg': 0.001, 'L2_reg': 0.001, 'hiddenLayers': [128, 64], 'tune_batch': 32}
+                    'L1_reg': 0.001, 'L2_reg': 0.001, 'hidden_layers': [128, 64], 'tune_batch': 32}
 
     res = pd.DataFrame()
     for i in range(20):

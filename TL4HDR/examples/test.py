@@ -58,29 +58,29 @@ def run_cv(cancer_type, feature_type, target, years=3, groups=("WHITE", "BLACK")
 
     parametrs_mix = {'fold': 3, 'k': k, 'val_size':0.0, 'batch_size':20,'momentum':0.9,
                      'learning_rate':0.01, 'lr_decay':0.03, 'dropout':0.5,
-                     'L1_reg': 0.001, 'L2_reg': 0.001, 'hiddenLayers': [128, 64]}
+                     'L1_reg': 0.001, 'L2_reg': 0.001, 'hidden_layers': [128, 64]}
     parametrs_w = {'fold': 3, 'k': k, 'val_size':0.0, 'batch_size':20,
                      'learning_rate':0.01, 'lr_decay':0.0, 'dropout':0.5,
-                     'L1_reg': 0.001, 'L2_reg': 0.001, 'hiddenLayers': [128, 64]}
+                     'L1_reg': 0.001, 'L2_reg': 0.001, 'hidden_layers': [128, 64]}
     parametrs_b = {'fold': 3, 'k': k, 'val_size':0.0, 'batch_size':4,
                      'learning_rate':0.01, 'lr_decay':0.0, 'dropout':0.5,
-                     'L1_reg': 0.001, 'L2_reg': 0.001, 'hiddenLayers': [128, 64]}
+                     'L1_reg': 0.001, 'L2_reg': 0.001, 'hidden_layers': [128, 64]}
 
     parametrs_tl = {'fold': 3, 'k': k, 'val_size':0.0, 'batch_size':20, 'tune_epoch':500,
                      'learning_rate':0.01, 'lr_decay':0.03, 'dropout':0.5, 'tune_lr':0.002,
-                     'L1_reg': 0.001, 'L2_reg': 0.001, 'hiddenLayers': [128, 64], 'tune_batch':10}
+                     'L1_reg': 0.001, 'L2_reg': 0.001, 'hidden_layers': [128, 64], 'tune_batch':10}
 
     parametrs_tl_unsupervised = {'fold': 3, 'k': k, 'val_size':0.0, 'batch_size':20,
                      'learning_rate':0.001, 'lr_decay':0.03, 'dropout':0.0, 'n_epochs':100,
-                     'L1_reg': 0.001, 'L2_reg': 0.001, 'hiddenLayers': [100]}
+                     'L1_reg': 0.001, 'L2_reg': 0.001, 'hidden_layers': [100]}
 
     # parametrs_tl_sa = {'fold': 3, 'k': k, 'val_size':0.0, 'batch_size':20,
     #                  'learning_rate':0.005, 'lr_decay':0.0, 'dropout':0.5,
-    #                  'L1_reg': 0.001, 'L2_reg': 0.001, 'hiddenLayers': [128, 64]}
+    #                  'L1_reg': 0.001, 'L2_reg': 0.001, 'hidden_layers': [128, 64]}
 
 
     parameters_CCSA = {'fold': 3, 'n_features': k, 'alpha':0.3, 'batch_size':32, 'learning_rate':0.01,
-                       'hiddenLayers': [100], 'dr':0.0, 'momentum':0.0,
+                       'hidden_layers': [100], 'dr':0.0, 'momentum':0.0,
                        'decay':0.0, 'sample_per_class':2}
 
     res = pd.DataFrame()
