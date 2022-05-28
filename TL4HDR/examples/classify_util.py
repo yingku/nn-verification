@@ -265,6 +265,10 @@ def train_and_predict(X_train_target, y_train_target,
                                                              
     #output the model
     print(model.summary())
+    
+    #print the model
+    plot_model(model, to_file='model_plot.png', show_shapes = True,
+    show_layer_names = True)
 
     print('Best AUC for {} target sample per class and repetition {} is {}.'.format(sample_per_class,
                                                                                              repetition, best_Auc))
