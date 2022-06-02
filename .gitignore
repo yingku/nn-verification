@@ -6,3 +6,5 @@
 
 /TL4HDR/Result/*.xlsx
 /TL4HDR/Result/*.txt
+/TL4HDR/Result/*.nnet
+/TL4HDR/Result/*.model
