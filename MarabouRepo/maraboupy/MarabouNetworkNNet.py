@@ -53,7 +53,7 @@ class MarabouNetworkNNet(MarabouNetwork.MarabouNetwork):
     """
 
     def __init__(self, filename='', normalize=False):
-        super().__init__()
+        super(MarabouNetworkNNet, self).__init__()
 
         self.clearNetwork()
 

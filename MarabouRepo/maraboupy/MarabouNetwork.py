@@ -21,7 +21,7 @@ from MarabouRepo.maraboupy import MarabouUtils
 import numpy as np
 
 
-class MarabouNetwork:
+class MarabouNetwork(object):
     """Abstract class representing general Marabou network
     
     Attributes:

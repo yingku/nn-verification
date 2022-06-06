@@ -64,6 +64,7 @@ def readNNet(nnetFile, withNorm=False):
             line=f.readline()
             aux = [float(x) for x in line.strip().split(",")[:-1]]
             for j in range(previousLayerSize):
+                test = aux[j]
                 weights[layernum][i,j] = aux[j]
         #biases
         biases[layernum] = np.zeros(currentLayerSize)

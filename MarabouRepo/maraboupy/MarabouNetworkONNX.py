@@ -34,13 +34,13 @@ class MarabouNetworkONNX(MarabouNetwork.MarabouNetwork):
         :class:`~MarabouRepo.maraboupy.Marabou.marabouNetworkONNX.marabouNetworkONNX`
     """
     def __init__(self, filename, inputNames=None, outputNames=None):
-        super().__init__()
+        super(MarabouNetworkONNX, self).__init__()
         self.readONNX(filename, inputNames, outputNames)
 
     def clear(self):
         """Reset values to represent empty network
         """
-        super().clear()
+        super(MarabouNetworkONNX, self).clear()
         self.madeGraphEquations = []
         self.varMap = dict()
         self.constantMap = dict()
