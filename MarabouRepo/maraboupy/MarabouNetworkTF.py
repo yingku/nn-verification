@@ -50,13 +50,13 @@ class MarabouNetworkTF(MarabouNetwork.MarabouNetwork):
         savedModelTags (list of str, optional): If loading a SavedModel, the user must specify tags used, default is []
     """
     def __init__(self, filename, inputNames=None, outputNames=None, modelType="frozen", savedModelTags=[]):
-        super().__init__()
+        super(MarabouNetworkTF, self).__init__()
         self.readTF(filename, inputNames, outputNames, modelType, savedModelTags)
 
     def clear(self):
         """Reset values to represent empty network
         """
-        super().clear()
+        super(MarabouNetworkTF, self).clear()
         self.madeGraphEquations = []
         self.varMap = dict()
         self.constantMap = dict()

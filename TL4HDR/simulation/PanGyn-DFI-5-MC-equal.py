@@ -26,7 +26,7 @@ def run_cv():
         neut=[58,33,33,56]
     )
 
-    dataset = factory.generate_black_white_data('PanGyn-DFI-5.mat',
+    dataset = factory.generate_black_white_data('TL4HDR/simulation/PanGyn-DFI-5.mat',
                                                 white_alive=130, white_dead=130, black_alive=130, black_dead=130)
     dataset_w = get_one_race_clf(dataset, 'WHITE')
     dataset_b = get_one_race_clf(dataset, 'BLACK')

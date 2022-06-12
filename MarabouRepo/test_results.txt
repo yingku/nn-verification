@@ -1,0 +1,768 @@
+Test project /home/nathan/Programming/python/nn-verification/MarabouRepo/build
+      Start 71: Test_NetworkLevelReasoner
+      Start 14: Test_MaxConstraint
+      Start 11: Test_Engine
+      Start 70: Test_DeepPolyAnalysis
+      Start 22: Test_SignConstraint
+      Start 17: Test_Preprocessor
+      Start 75: Test_Checker
+      Start 72: Test_WsLayerElimination
+ 1/69 Test #14: Test_MaxConstraint .................   Passed    0.60 sec
+      Start 25: Test_SumOfInfeasibilitiesManager
+ 2/69 Test #71: Test_NetworkLevelReasoner ..........   Passed    0.82 sec
+      Start  1: Test_AbsoluteValueConstraint
+ 3/69 Test #11: Test_Engine ........................   Passed    0.94 sec
+      Start 24: Test_SmtCore
+ 4/69 Test #70: Test_DeepPolyAnalysis ..............   Passed    0.94 sec
+      Start 12: Test_InputQuery
+ 5/69 Test #17: Test_Preprocessor ..................   Passed    0.75 sec
+      Start  9: Test_DisjunctionConstraint
+ 6/69 Test #22: Test_SignConstraint ................   Passed    0.91 sec
+      Start 16: Test_PolarityBasedDivider
+ 7/69 Test #25: Test_SumOfInfeasibilitiesManager ...   Passed    0.72 sec
+      Start 69: Test_QueryLoader
+ 8/69 Test #72: Test_WsLayerElimination ............   Passed    0.88 sec
+      Start 20: Test_ReluConstraint
+ 9/69 Test #12: Test_InputQuery ....................   Passed    0.61 sec
+      Start 59: Test_MatrixMultiplication
+10/69 Test #75: Test_Checker .......................   Passed    1.50 sec
+      Start 19: Test_PseudoImpactTracker
+11/69 Test  #1: Test_AbsoluteValueConstraint .......   Passed    1.21 sec
+      Start 73: Test_ParallelSolver
+12/69 Test #24: Test_SmtCore .......................   Passed    1.10 sec
+      Start 26: Test_Tableau
+13/69 Test  #9: Test_DisjunctionConstraint .........   Passed    0.97 sec
+      Start  8: Test_DegradationChecker
+14/69 Test #16: Test_PolarityBasedDivider ..........   Passed    1.01 sec
+      Start 18: Test_ProjectedSteepestEdge
+15/69 Test #20: Test_ReluConstraint ................   Passed    0.87 sec
+      Start 77: Test_UnsatCertificateNode
+16/69 Test #69: Test_QueryLoader ...................   Passed    0.98 sec
+      Start 21: Test_RowBoundTightener
+17/69 Test #73: Test_ParallelSolver ................   Passed    0.69 sec
+      Start 74: Test_BoundExplainer
+18/69 Test #19: Test_PseudoImpactTracker ...........   Passed    0.81 sec
+      Start 76: Test_SmtLibWriter
+19/69 Test #26: Test_Tableau .......................   Passed    0.74 sec
+      Start 29: Test_ForrestTomlinFactorization
+20/69 Test #18: Test_ProjectedSteepestEdge .........   Passed    0.74 sec
+      Start 28: Test_CompareFactorizations
+21/69 Test  #8: Test_DegradationChecker ............   Passed    0.85 sec
+      Start 10: Test_DnCWorker
+22/69 Test #59: Test_MatrixMultiplication ..........   Passed    1.52 sec
+      Start 31: Test_LUFactors
+23/69 Test #77: Test_UnsatCertificateNode ..........   Passed    0.94 sec
+      Start 27: Test_CSRMatrix
+24/69 Test #21: Test_RowBoundTightener .............   Passed    0.96 sec
+      Start 13: Test_LargestIntervalDivider
+25/69 Test #74: Test_BoundExplainer ................   Passed    0.67 sec
+      Start 23: Test_SigmoidConstraint
+26/69 Test #76: Test_SmtLibWriter ..................   Passed    0.69 sec
+      Start 56: Test_Set
+27/69 Test #29: Test_ForrestTomlinFactorization ....   Passed    0.67 sec
+      Start 30: Test_LUFactorization
+28/69 Test #28: Test_CompareFactorizations .........   Passed    0.61 sec
+      Start  5: Test_ConstraintMatrixAnalyzer
+29/69 Test #10: Test_DnCWorker .....................   Passed    0.59 sec
+      Start 78: Test_UnsatCertificateUtils
+30/69 Test #31: Test_LUFactors .....................   Passed    0.46 sec
+      Start 15: Test_MILPEncoder
+31/69 Test #27: Test_CSRMatrix .....................   Passed    0.44 sec
+      Start 35: Test_SparseLUFactorization
+32/69 Test #13: Test_LargestIntervalDivider ........   Passed    0.43 sec
+      Start 34: Test_SparseGaussianEliminator
+33/69 Test #23: Test_SigmoidConstraint .............   Passed    0.41 sec
+      Start  2: Test_BlandsRule
+34/69 Test #56: Test_Set ...........................   Passed    0.41 sec
+      Start 32: Test_PermutationMatrix
+35/69 Test #30: Test_LUFactorization ...............   Passed    0.42 sec
+      Start  6: Test_CostFunctionManager
+36/69 Test  #5: Test_ConstraintMatrixAnalyzer ......   Passed    0.43 sec
+      Start  4: Test_ConstraintBoundTightener
+37/69 Test #78: Test_UnsatCertificateUtils .........   Passed    0.44 sec
+      Start 39: Test_SparseUnsortedList
+38/69 Test #15: Test_MILPEncoder ...................   Passed    0.46 sec
+      Start 46: Test_HashMap
+39/69 Test #35: Test_SparseLUFactorization .........   Passed    0.46 sec
+      Start 40: Test_SparseUnsortedLists
+40/69 Test  #2: Test_BlandsRule ....................   Passed    0.38 sec
+      Start 52: Test_MStringf
+41/69 Test #34: Test_SparseGaussianEliminator ......   Passed    0.49 sec
+      Start 33: Test_SparseFTFactorization
+42/69 Test #32: Test_PermutationMatrix .............   Passed    0.44 sec
+      Start  7: Test_DantzigsRule
+43/69 Test  #6: Test_CostFunctionManager ...........   Passed    0.45 sec
+      Start 51: Test_MString
+44/69 Test  #4: Test_ConstraintBoundTightener ......   Passed    0.41 sec
+      Start 43: Test_File
+45/69 Test #40: Test_SparseUnsortedLists ...........   Passed    0.33 sec
+      Start 38: Test_SparseUnsortedArrays
+46/69 Test #52: Test_MStringf ......................   Passed    0.36 sec
+      Start 45: Test_GurobiWrapper
+47/69 Test #46: Test_HashMap .......................   Passed    0.48 sec
+      Start 58: Test_Vector
+48/69 Test #39: Test_SparseUnsortedList ............   Passed    0.57 sec
+      Start 55: Test_Queue
+49/69 Test #33: Test_SparseFTFactorization .........   Passed    0.63 sec
+      Start 49: Test_LinearExpression
+50/69 Test  #7: Test_DantzigsRule ..................   Passed    0.59 sec
+      Start 42: Test_Error
+51/69 Test #51: Test_MString .......................   Passed    0.67 sec
+      Start 54: Test_Pair
+52/69 Test #38: Test_SparseUnsortedArrays ..........   Passed    0.61 sec
+      Start 37: Test_SparseUnsortedArray
+53/69 Test #43: Test_File ..........................   Passed    0.78 sec
+      Start 53: Test_Map
+54/69 Test #45: Test_GurobiWrapper .................   Passed    0.71 sec
+      Start 50: Test_List
+55/69 Test #58: Test_Vector ........................   Passed    0.71 sec
+      Start 57: Test_Stack
+56/69 Test #55: Test_Queue .........................   Passed    0.74 sec
+      Start 41: Test_ConstSimpleData
+57/69 Test #49: Test_LinearExpression ..............   Passed    0.57 sec
+      Start  3: Test_BoundManager
+58/69 Test #42: Test_Error .........................   Passed    0.57 sec
+      Start 44: Test_FloatUtils
+59/69 Test #54: Test_Pair ..........................   Passed    0.49 sec
+      Start 47: Test_HashSet
+60/69 Test #37: Test_SparseUnsortedArray ...........   Passed    0.51 sec
+      Start 36: Test_SparseLUFactors
+61/69 Test #53: Test_Map ...........................   Passed    0.49 sec
+      Start 48: Test_HeapData
+62/69 Test #50: Test_List ..........................   Passed    0.49 sec
+63/69 Test #57: Test_Stack .........................   Passed    0.46 sec
+64/69 Test #41: Test_ConstSimpleData ...............   Passed    0.40 sec
+65/69 Test  #3: Test_BoundManager ..................   Passed    0.33 sec
+66/69 Test #44: Test_FloatUtils ....................   Passed    0.26 sec
+67/69 Test #47: Test_HashSet .......................   Passed    0.21 sec
+68/69 Test #36: Test_SparseLUFactors ...............   Passed    0.18 sec
+69/69 Test #48: Test_HeapData ......................   Passed    0.12 sec
+
+100% tests passed, 0 tests failed out of 69
+
+Label Time Summary:
+basis_factorization unit       =   6.82 sec*proc (14 tests)
+common unit                    =  10.44 sec*proc (19 tests)
+engine unit                    =  18.25 sec*proc (26 tests)
+network_level_reasoner unit    =   3.33 sec*proc (4 tests)
+proofs unit                    =   4.24 sec*proc (5 tests)
+query_loader unit              =   0.98 sec*proc (1 test)
+
+Total Test time (real) =   6.03 sec
+[100%] Built target build-tests
+Test project /home/nathan/Programming/python/nn-verification/MarabouRepo/build
+        Start  75: Test_Checker
+        Start  71: Test_NetworkLevelReasoner
+        Start  59: Test_MatrixMultiplication
+        Start  11: Test_Engine
+        Start   1: Test_AbsoluteValueConstraint
+        Start  70: Test_DeepPolyAnalysis
+        Start  22: Test_SignConstraint
+        Start  24: Test_SmtCore
+  1/281 Test  #75: Test_Checker .............................................................   Passed    0.13 sec
+        Start  72: Test_WsLayerElimination
+  2/281 Test  #59: Test_MatrixMultiplication ................................................   Passed    0.22 sec
+        Start  16: Test_PolarityBasedDivider
+  3/281 Test  #24: Test_SmtCore .............................................................   Passed    0.25 sec
+        Start  17: Test_Preprocessor
+  4/281 Test   #1: Test_AbsoluteValueConstraint .............................................   Passed    0.29 sec
+        Start   9: Test_DisjunctionConstraint
+  5/281 Test  #11: Test_Engine ..............................................................   Passed    0.32 sec
+        Start  69: Test_QueryLoader
+  6/281 Test  #22: Test_SignConstraint ......................................................   Passed    0.34 sec
+        Start  14: Test_MaxConstraint
+  7/281 Test  #70: Test_DeepPolyAnalysis ....................................................   Passed    0.37 sec
+        Start  20: Test_ReluConstraint
+  8/281 Test  #72: Test_WsLayerElimination ..................................................   Passed    0.40 sec
+        Start  25: Test_SumOfInfeasibilitiesManager
+  9/281 Test   #9: Test_DisjunctionConstraint ...............................................   Passed    0.25 sec
+        Start  19: Test_PseudoImpactTracker
+ 10/281 Test  #16: Test_PolarityBasedDivider ................................................   Passed    0.33 sec
+        Start  21: Test_RowBoundTightener
+ 11/281 Test  #17: Test_Preprocessor ........................................................   Passed    0.29 sec
+        Start  77: Test_UnsatCertificateNode
+ 12/281 Test  #14: Test_MaxConstraint .......................................................   Passed    0.21 sec
+        Start   8: Test_DegradationChecker
+ 13/281 Test  #20: Test_ReluConstraint ......................................................   Passed    0.20 sec
+        Start  12: Test_InputQuery
+ 14/281 Test  #69: Test_QueryLoader .........................................................   Passed    0.26 sec
+        Start  73: Test_ParallelSolver
+ 15/281 Test  #21: Test_RowBoundTightener ...................................................   Passed    0.07 sec
+        Start  26: Test_Tableau
+ 16/281 Test  #19: Test_PseudoImpactTracker .................................................   Passed    0.16 sec
+        Start  18: Test_ProjectedSteepestEdge
+ 17/281 Test  #71: Test_NetworkLevelReasoner ................................................   Passed    0.74 sec
+        Start  74: Test_BoundExplainer
+ 18/281 Test  #25: Test_SumOfInfeasibilitiesManager .........................................   Passed    0.21 sec
+        Start  76: Test_SmtLibWriter
+ 19/281 Test   #8: Test_DegradationChecker ..................................................   Passed    0.19 sec
+        Start  29: Test_ForrestTomlinFactorization
+ 20/281 Test  #18: Test_ProjectedSteepestEdge ...............................................   Passed    0.06 sec
+        Start  43: Test_File
+ 21/281 Test  #26: Test_Tableau .............................................................   Passed    0.14 sec
+        Start  55: Test_Queue
+ 22/281 Test  #77: Test_UnsatCertificateNode ................................................   Passed    0.22 sec
+        Start  28: Test_CompareFactorizations
+ 23/281 Test  #12: Test_InputQuery ..........................................................   Passed    0.20 sec
+        Start  58: Test_Vector
+ 24/281 Test  #73: Test_ParallelSolver ......................................................   Passed    0.19 sec
+        Start  45: Test_GurobiWrapper
+ 25/281 Test  #74: Test_BoundExplainer ......................................................   Passed    0.06 sec
+        Start  10: Test_DnCWorker
+ 26/281 Test  #76: Test_SmtLibWriter ........................................................   Passed    0.08 sec
+        Start  51: Test_MString
+ 27/281 Test  #29: Test_ForrestTomlinFactorization ..........................................   Passed    0.06 sec
+        Start  33: Test_SparseFTFactorization
+ 28/281 Test  #43: Test_File ................................................................   Passed    0.06 sec
+        Start  38: Test_SparseUnsortedArrays
+ 29/281 Test  #55: Test_Queue ...............................................................   Passed    0.06 sec
+        Start   7: Test_DantzigsRule
+ 30/281 Test  #28: Test_CompareFactorizations ...............................................   Passed    0.06 sec
+        Start  39: Test_SparseUnsortedList
+ 31/281 Test  #58: Test_Vector ..............................................................   Passed    0.07 sec
+        Start  49: Test_LinearExpression
+ 32/281 Test  #45: Test_GurobiWrapper .......................................................   Passed    0.07 sec
+        Start  42: Test_Error
+ 33/281 Test  #10: Test_DnCWorker ...........................................................   Passed    0.07 sec
+        Start  31: Test_LUFactors
+ 34/281 Test  #51: Test_MString .............................................................   Passed    0.05 sec
+        Start  34: Test_SparseGaussianEliminator
+ 35/281 Test  #33: Test_SparseFTFactorization ...............................................   Passed    0.05 sec
+        Start  37: Test_SparseUnsortedArray
+ 36/281 Test  #38: Test_SparseUnsortedArrays ................................................   Passed    0.05 sec
+        Start  27: Test_CSRMatrix
+ 37/281 Test   #7: Test_DantzigsRule ........................................................   Passed    0.05 sec
+        Start  15: Test_MILPEncoder
+ 38/281 Test  #39: Test_SparseUnsortedList ..................................................   Passed    0.05 sec
+        Start  46: Test_HashMap
+ 39/281 Test  #49: Test_LinearExpression ....................................................   Passed    0.05 sec
+        Start  54: Test_Pair
+ 40/281 Test  #42: Test_Error ...............................................................   Passed    0.06 sec
+        Start  35: Test_SparseLUFactorization
+ 41/281 Test  #31: Test_LUFactors ...........................................................   Passed    0.06 sec
+        Start  13: Test_LargestIntervalDivider
+ 42/281 Test  #34: Test_SparseGaussianEliminator ............................................   Passed    0.06 sec
+        Start  50: Test_List
+ 43/281 Test  #37: Test_SparseUnsortedArray .................................................   Passed    0.06 sec
+        Start  53: Test_Map
+ 44/281 Test  #27: Test_CSRMatrix ...........................................................   Passed    0.06 sec
+        Start  78: Test_UnsatCertificateUtils
+ 45/281 Test  #15: Test_MILPEncoder .........................................................   Passed    0.06 sec
+        Start   5: Test_ConstraintMatrixAnalyzer
+ 46/281 Test  #46: Test_HashMap .............................................................   Passed    0.07 sec
+        Start   6: Test_CostFunctionManager
+ 47/281 Test  #50: Test_List ................................................................   Passed    0.04 sec
+        Start  56: Test_Set
+ 48/281 Test  #54: Test_Pair ................................................................   Passed    0.08 sec
+        Start  23: Test_SigmoidConstraint
+ 49/281 Test  #78: Test_UnsatCertificateUtils ...............................................   Passed    0.05 sec
+        Start  30: Test_LUFactorization
+ 50/281 Test  #53: Test_Map .................................................................   Passed    0.06 sec
+        Start  32: Test_PermutationMatrix
+ 51/281 Test   #5: Test_ConstraintMatrixAnalyzer ............................................   Passed    0.05 sec
+        Start  57: Test_Stack
+ 52/281 Test  #13: Test_LargestIntervalDivider ..............................................   Passed    0.09 sec
+        Start   4: Test_ConstraintBoundTightener
+ 53/281 Test  #35: Test_SparseLUFactorization ...............................................   Passed    0.10 sec
+        Start   2: Test_BlandsRule
+ 54/281 Test  #30: Test_LUFactorization .....................................................   Passed    0.03 sec
+        Start  41: Test_ConstSimpleData
+ 55/281 Test  #56: Test_Set .................................................................   Passed    0.06 sec
+        Start  52: Test_MStringf
+ 56/281 Test   #6: Test_CostFunctionManager .................................................   Passed    0.08 sec
+        Start  40: Test_SparseUnsortedLists
+ 57/281 Test  #23: Test_SigmoidConstraint ...................................................   Passed    0.06 sec
+        Start   3: Test_BoundManager
+ 58/281 Test  #32: Test_PermutationMatrix ...................................................   Passed    0.05 sec
+        Start  44: Test_FloatUtils
+ 59/281 Test  #57: Test_Stack ...............................................................   Passed    0.05 sec
+        Start  47: Test_HashSet
+ 60/281 Test   #2: Test_BlandsRule ..........................................................   Passed    0.04 sec
+        Start  36: Test_SparseLUFactors
+ 61/281 Test   #4: Test_ConstraintBoundTightener ............................................   Passed    0.06 sec
+        Start  48: Test_HeapData
+ 62/281 Test  #41: Test_ConstSimpleData .....................................................   Passed    0.05 sec
+        Start  60: Test_acas
+ 63/281 Test  #52: Test_MStringf ............................................................   Passed    0.08 sec
+        Start  61: Test_lp
+ 64/281 Test  #40: Test_SparseUnsortedLists .................................................   Passed    0.08 sec
+        Start  62: Test_max
+ 65/281 Test   #3: Test_BoundManager ........................................................   Passed    0.32 sec
+        Start  63: Test_mps
+ 66/281 Test  #44: Test_FloatUtils ..........................................................   Passed    0.38 sec
+        Start  64: Test_relu
+ 67/281 Test  #47: Test_HashSet .............................................................   Passed    0.41 sec
+        Start  65: Test_sign
+ 68/281 Test  #36: Test_SparseLUFactors .....................................................   Passed    0.45 sec
+        Start  66: Test_Disjunction
+ 69/281 Test  #48: Test_HeapData ............................................................   Passed    0.47 sec
+        Start  67: Test_AbsoluteValue
+ 70/281 Test  #61: Test_lp ..................................................................   Passed    0.50 sec
+        Start  68: Test_wsElimination
+ 71/281 Test  #62: Test_max .................................................................   Passed    1.23 sec
+        Start  79: lp_feasible_1.mps
+ 72/281 Test  #63: Test_mps .................................................................   Passed    1.01 sec
+        Start  80: lp_infeasible_1.mps
+ 73/281 Test  #64: Test_relu ................................................................   Passed    1.10 sec
+        Start  81: ACASXU_experimental_v2a_1_7.nnet%acas_property_3.txt%
+ 74/281 Test  #65: Test_sign ................................................................   Passed    1.19 sec
+        Start  82: ACASXU_experimental_v2a_1_9.nnet%acas_property_4.txt%--snc
+ 75/281 Test  #66: Test_Disjunction .........................................................   Passed    1.17 sec
+        Start  83: ACASXU_experimental_v2a_4_1.nnet%acas_property_4.txt%
+ 76/281 Test  #80: lp_infeasible_1.mps ......................................................   Passed    0.47 sec
+        Start  84: mnist10x20.nnet%image1_target1_epsilon0.005.txt%
+ 77/281 Test  #79: lp_feasible_1.mps ........................................................   Passed    0.53 sec
+        Start  85: mnist2x256.nnet%image3_target9_epsilon0.005.txt%
+ 78/281 Test  #83: ACASXU_experimental_v2a_4_1.nnet%acas_property_4.txt% ....................   Passed    0.41 sec
+        Start  86: reluBenchmark0.067841053009s_UNSAT.nnet%builtin_property.txt%
+ 79/281 Test  #86: reluBenchmark0.067841053009s_UNSAT.nnet%builtin_property.txt% ............   Passed    0.34 sec
+        Start  87: reluBenchmark0.0518190860748s_UNSAT.nnet%builtin_property.txt%
+ 80/281 Test  #81: ACASXU_experimental_v2a_1_7.nnet%acas_property_3.txt% ....................   Passed    0.99 sec
+        Start  88: reluBenchmark0.536728143692s_SAT.nnet%builtin_property.txt%
+ 81/281 Test  #87: reluBenchmark0.0518190860748s_UNSAT.nnet%builtin_property.txt% ...........   Passed    0.20 sec
+        Start  89: reluBenchmark0.899523973465s_SAT.nnet%builtin_property.txt%
+ 82/281 Test  #82: ACASXU_experimental_v2a_1_9.nnet%acas_property_4.txt%--snc ...............   Passed    1.04 sec
+        Start  90: reluBenchmark1.30941200256s_UNSAT.nnet%builtin_property.txt%
+ 83/281 Test  #84: mnist10x20.nnet%image1_target1_epsilon0.005.txt% .........................   Passed    0.87 sec
+        Start  91: reluBenchmark0.94518494606s_SAT.nnet%builtin_property.txt%
+ 84/281 Test  #88: reluBenchmark0.536728143692s_SAT.nnet%builtin_property.txt% ..............   Passed    0.40 sec
+        Start  92: ACASXU_experimental_v2a_1_8.nnet%acas_property_3.txt%
+ 85/281 Test  #89: reluBenchmark0.899523973465s_SAT.nnet%builtin_property.txt% ..............   Passed    0.31 sec
+        Start  93: ACASXU_experimental_v2a_2_9.nnet%acas_property_3.txt%
+ 86/281 Test  #90: reluBenchmark1.30941200256s_UNSAT.nnet%builtin_property.txt% .............   Passed    0.41 sec
+        Start  94: ACASXU_experimental_v2a_1_6.nnet%acas_property_3.txt%
+ 87/281 Test  #91: reluBenchmark0.94518494606s_SAT.nnet%builtin_property.txt% ...............   Passed    0.46 sec
+        Start  95: ACASXU_experimental_v2a_3_6.nnet%acas_property_4.txt%
+ 88/281 Test  #94: ACASXU_experimental_v2a_1_6.nnet%acas_property_3.txt% ....................   Passed    0.48 sec
+        Start  96: ACASXU_experimental_v2a_1_7.nnet%acas_property_4.txt%
+ 89/281 Test  #93: ACASXU_experimental_v2a_2_9.nnet%acas_property_3.txt% ....................   Passed    0.67 sec
+        Start  97: ACASXU_experimental_v2a_1_8.nnet%acas_property_4.txt%
+ 90/281 Test  #92: ACASXU_experimental_v2a_1_8.nnet%acas_property_3.txt% ....................   Passed    1.29 sec
+        Start  98: ACASXU_experimental_v2a_1_9.nnet%acas_property_4.txt%
+ 91/281 Test  #96: ACASXU_experimental_v2a_1_7.nnet%acas_property_4.txt% ....................   Passed    0.86 sec
+        Start  99: mnist10x10.nnet%image2_target2_epsilon0.005.txt%
+ 92/281 Test  #85: mnist2x256.nnet%image3_target9_epsilon0.005.txt% .........................   Passed    2.67 sec
+        Start 100: mnist10x10.nnet%image2_target6_epsilon0.005.txt%
+ 93/281 Test  #97: ACASXU_experimental_v2a_1_8.nnet%acas_property_4.txt% ....................   Passed    1.08 sec
+        Start 101: mnist10x10.nnet%image3_target2_epsilon0.05.txt%
+ 94/281 Test  #67: Test_AbsoluteValue .......................................................   Passed    4.32 sec
+        Start 102: mnist10x10.nnet%image3_target4_epsilon0.005.txt%
+ 95/281 Test  #95: ACASXU_experimental_v2a_3_6.nnet%acas_property_4.txt% ....................   Passed    1.84 sec
+        Start 103: ACASXU_experimental_v2a_5_7.nnet%acas_property_3.txt%--snc
+ 96/281 Test #100: mnist10x10.nnet%image2_target6_epsilon0.005.txt% .........................   Passed    0.61 sec
+        Start 104: ACASXU_experimental_v2a_4_7.nnet%acas_property_4.txt%--snc
+ 97/281 Test #102: mnist10x10.nnet%image3_target4_epsilon0.005.txt% .........................   Passed    0.78 sec
+        Start 105: reluBenchmark0.453322172165s_UNSAT.nnet%builtin_property.txt%
+ 98/281 Test #103: ACASXU_experimental_v2a_5_7.nnet%acas_property_3.txt%--snc ...............   Passed    0.79 sec
+        Start 106: reluBenchmark0.30711388588s_UNSAT.nnet%builtin_property.txt%
+ 99/281 Test  #99: mnist10x10.nnet%image2_target2_epsilon0.005.txt% .........................   Passed    1.39 sec
+        Start 107: reluBenchmark0.00512099266052s_UNSAT.nnet%builtin_property.txt%
+100/281 Test #105: reluBenchmark0.453322172165s_UNSAT.nnet%builtin_property.txt% ............   Passed    0.31 sec
+        Start 108: reluBenchmark0.725997209549s_UNSAT.nnet%builtin_property.txt%
+101/281 Test #106: reluBenchmark0.30711388588s_UNSAT.nnet%builtin_property.txt% .............   Passed    0.31 sec
+        Start 109: reluBenchmark0.919886112213s_UNSAT.nnet%builtin_property.txt%
+102/281 Test #107: reluBenchmark0.00512099266052s_UNSAT.nnet%builtin_property.txt% ..........   Passed    0.31 sec
+        Start 110: reluBenchmark0.0352051258087s_UNSAT.nnet%builtin_property.txt%
+103/281 Test #108: reluBenchmark0.725997209549s_UNSAT.nnet%builtin_property.txt% ............   Passed    0.34 sec
+        Start 111: reluBenchmark0.97177696228s_UNSAT.nnet%builtin_property.txt%
+104/281 Test  #98: ACASXU_experimental_v2a_1_9.nnet%acas_property_4.txt% ....................   Passed    2.22 sec
+        Start 112: reluBenchmark1.36359000206s_UNSAT.nnet%builtin_property.txt%
+105/281 Test #109: reluBenchmark0.919886112213s_UNSAT.nnet%builtin_property.txt% ............   Passed    0.41 sec
+        Start 113: reluBenchmark0.0990879535675s_UNSAT.nnet%builtin_property.txt%
+106/281 Test #110: reluBenchmark0.0352051258087s_UNSAT.nnet%builtin_property.txt% ...........   Passed    0.47 sec
+        Start 114: reluBenchmark1.20350694656s_SAT.nnet%builtin_property.txt%
+107/281 Test #111: reluBenchmark0.97177696228s_UNSAT.nnet%builtin_property.txt% .............   Passed    0.42 sec
+        Start 115: reluBenchmark0.221790075302s_SAT.nnet%builtin_property.txt%
+108/281 Test #112: reluBenchmark1.36359000206s_UNSAT.nnet%builtin_property.txt% .............   Passed    0.30 sec
+        Start 116: reluBenchmark0.048150062561s_UNSAT.nnet%builtin_property.txt%
+109/281 Test #113: reluBenchmark0.0990879535675s_UNSAT.nnet%builtin_property.txt% ...........   Passed    0.28 sec
+        Start 117: reluBenchmark0.781363010406s_SAT.nnet%builtin_property.txt%
+110/281 Test #114: reluBenchmark1.20350694656s_SAT.nnet%builtin_property.txt% ...............   Passed    0.29 sec
+        Start 118: reluBenchmark0.0492730140686s_UNSAT.nnet%builtin_property.txt%
+111/281 Test #116: reluBenchmark0.048150062561s_UNSAT.nnet%builtin_property.txt% ............   Passed    0.21 sec
+        Start 119: reluBenchmark0.0494029521942s_UNSAT.nnet%builtin_property.txt%
+112/281 Test #115: reluBenchmark0.221790075302s_SAT.nnet%builtin_property.txt% ..............   Passed    0.30 sec
+        Start 120: reluBenchmark0.499482154846s_SAT.nnet%builtin_property.txt%
+113/281 Test #119: reluBenchmark0.0494029521942s_UNSAT.nnet%builtin_property.txt% ...........   Passed    0.12 sec
+        Start 121: reluBenchmark0.674989938736s_SAT.nnet%builtin_property.txt%
+114/281 Test #117: reluBenchmark0.781363010406s_SAT.nnet%builtin_property.txt% ..............   Passed    0.35 sec
+        Start 122: reluBenchmark1.15705108643s_SAT.nnet%builtin_property.txt%
+115/281 Test #118: reluBenchmark0.0492730140686s_UNSAT.nnet%builtin_property.txt% ...........   Passed    0.26 sec
+        Start 123: reluBenchmark0.0606548786163s_UNSAT.nnet%builtin_property.txt%
+116/281 Test #121: reluBenchmark0.674989938736s_SAT.nnet%builtin_property.txt% ..............   Passed    0.28 sec
+        Start 124: reluBenchmark1.21319699287s_SAT.nnet%builtin_property.txt%
+117/281 Test #120: reluBenchmark0.499482154846s_SAT.nnet%builtin_property.txt% ..............   Passed    0.45 sec
+        Start 125: reluBenchmark0.0064799785614s_UNSAT.nnet%builtin_property.txt%
+118/281 Test #122: reluBenchmark1.15705108643s_SAT.nnet%builtin_property.txt% ...............   Passed    0.31 sec
+        Start 126: reluBenchmark0.0780329704285s_UNSAT.nnet%builtin_property.txt%
+119/281 Test #104: ACASXU_experimental_v2a_4_7.nnet%acas_property_4.txt%--snc ...............   Passed    2.35 sec
+        Start 127: reluBenchmark0.454473018646s_SAT.nnet%builtin_property.txt%
+120/281 Test #123: reluBenchmark0.0606548786163s_UNSAT.nnet%builtin_property.txt% ...........   Passed    0.38 sec
+        Start 128: reluBenchmark0.00568509101868s_UNSAT.nnet%builtin_property.txt%
+121/281 Test #125: reluBenchmark0.0064799785614s_UNSAT.nnet%builtin_property.txt% ...........   Passed    0.15 sec
+        Start 129: reluBenchmark0.930528879166s_SAT.nnet%builtin_property.txt%
+122/281 Test #124: reluBenchmark1.21319699287s_SAT.nnet%builtin_property.txt% ...............   Passed    0.31 sec
+        Start 130: reluBenchmark0.0380239486694s_UNSAT.nnet%builtin_property.txt%
+123/281 Test #126: reluBenchmark0.0780329704285s_UNSAT.nnet%builtin_property.txt% ...........   Passed    0.24 sec
+        Start 131: reluBenchmark0.764842987061s_SAT.nnet%builtin_property.txt%
+124/281 Test #128: reluBenchmark0.00568509101868s_UNSAT.nnet%builtin_property.txt% ..........   Passed    0.35 sec
+        Start 132: reluBenchmark0.385080099106s_SAT.nnet%builtin_property.txt%
+125/281 Test #127: reluBenchmark0.454473018646s_SAT.nnet%builtin_property.txt% ..............   Passed    0.40 sec
+        Start 133: reluBenchmark1.07406687737s_UNSAT.nnet%builtin_property.txt%
+126/281 Test #129: reluBenchmark0.930528879166s_SAT.nnet%builtin_property.txt% ..............   Passed    0.32 sec
+        Start 134: reluBenchmark0.0645151138306s_UNSAT.nnet%builtin_property.txt%
+127/281 Test #130: reluBenchmark0.0380239486694s_UNSAT.nnet%builtin_property.txt% ...........   Passed    0.30 sec
+        Start 135: reluBenchmark1.04137301445s_SAT.nnet%builtin_property.txt%
+128/281 Test #131: reluBenchmark0.764842987061s_SAT.nnet%builtin_property.txt% ..............   Passed    0.37 sec
+        Start 136: reluBenchmark0.505765914917s_UNSAT.nnet%builtin_property.txt%
+129/281 Test #135: reluBenchmark1.04137301445s_SAT.nnet%builtin_property.txt% ...............   Passed    0.33 sec
+        Start 137: reluBenchmark1.07428097725s_SAT.nnet%builtin_property.txt%
+130/281 Test #134: reluBenchmark0.0645151138306s_UNSAT.nnet%builtin_property.txt% ...........   Passed    0.35 sec
+        Start 138: reluBenchmark0.734488964081s_SAT.nnet%builtin_property.txt%
+131/281 Test #132: reluBenchmark0.385080099106s_SAT.nnet%builtin_property.txt% ..............   Passed    0.46 sec
+        Start 139: reluBenchmark0.326423883438s_UNSAT.nnet%builtin_property.txt%
+132/281 Test #136: reluBenchmark0.505765914917s_UNSAT.nnet%builtin_property.txt% ............   Passed    0.27 sec
+        Start 140: reluBenchmark0.398984909058s_SAT.nnet%builtin_property.txt%
+133/281 Test #133: reluBenchmark1.07406687737s_UNSAT.nnet%builtin_property.txt% .............   Passed    0.50 sec
+        Start 141: reluBenchmark0.379405975342s_SAT.nnet%builtin_property.txt%
+134/281 Test #137: reluBenchmark1.07428097725s_SAT.nnet%builtin_property.txt% ...............   Passed    0.21 sec
+        Start 142: reluBenchmark0.479170084s_UNSAT.nnet%builtin_property.txt%
+135/281 Test #141: reluBenchmark0.379405975342s_SAT.nnet%builtin_property.txt% ..............   Passed    0.18 sec
+        Start 143: reluBenchmark0.0386769771576s_UNSAT.nnet%builtin_property.txt%
+136/281 Test #138: reluBenchmark0.734488964081s_SAT.nnet%builtin_property.txt% ..............   Passed    0.44 sec
+        Start 144: reluBenchmark1.4906899929s_SAT.nnet%builtin_property.txt%
+137/281 Test #140: reluBenchmark0.398984909058s_SAT.nnet%builtin_property.txt% ..............   Passed    0.37 sec
+        Start 145: reluBenchmark2.79231500626s_SAT.nnet%builtin_property.txt%
+138/281 Test #139: reluBenchmark0.326423883438s_UNSAT.nnet%builtin_property.txt% ............   Passed    0.42 sec
+        Start 146: reluBenchmark0.345348119736s_SAT.nnet%builtin_property.txt%
+139/281 Test #101: mnist10x10.nnet%image3_target2_epsilon0.05.txt% ..........................   Passed    4.12 sec
+        Start 147: reluBenchmark0.780378818512s_UNSAT.nnet%builtin_property.txt%
+140/281 Test #145: reluBenchmark2.79231500626s_SAT.nnet%builtin_property.txt% ...............   Passed    0.25 sec
+        Start 148: reluBenchmark1.32709693909s_SAT.nnet%builtin_property.txt%
+141/281 Test #142: reluBenchmark0.479170084s_UNSAT.nnet%builtin_property.txt% ...............   Passed    0.53 sec
+        Start 149: reluBenchmark0.287177085876s_UNSAT.nnet%builtin_property.txt%
+142/281 Test  #60: Test_acas ................................................................   Passed    9.02 sec
+        Start 150: reluBenchmark0.0374069213867s_UNSAT.nnet%builtin_property.txt%
+143/281 Test #143: reluBenchmark0.0386769771576s_UNSAT.nnet%builtin_property.txt% ...........   Passed    0.58 sec
+        Start 151: reluBenchmark0.0594508647919s_UNSAT.nnet%builtin_property.txt%
+144/281 Test #148: reluBenchmark1.32709693909s_SAT.nnet%builtin_property.txt% ...............   Passed    0.28 sec
+        Start 152: reluBenchmark0.0918869972229s_UNSAT.nnet%builtin_property.txt%
+145/281 Test #146: reluBenchmark0.345348119736s_SAT.nnet%builtin_property.txt% ..............   Passed    0.56 sec
+        Start 153: reluBenchmark0.983299016953s_UNSAT.nnet%builtin_property.txt%
+146/281 Test #147: reluBenchmark0.780378818512s_UNSAT.nnet%builtin_property.txt% ............   Passed    0.55 sec
+        Start 154: reluBenchmark0.0842049121857s_UNSAT.nnet%builtin_property.txt%
+147/281 Test #150: reluBenchmark0.0374069213867s_UNSAT.nnet%builtin_property.txt% ...........   Passed    0.33 sec
+        Start 155: reluBenchmark0.213617086411s_UNSAT.nnet%builtin_property.txt%
+148/281 Test #149: reluBenchmark0.287177085876s_UNSAT.nnet%builtin_property.txt% ............   Passed    0.43 sec
+        Start 156: reluBenchmark0.666516065598s_UNSAT.nnet%builtin_property.txt%
+149/281 Test #144: reluBenchmark1.4906899929s_SAT.nnet%builtin_property.txt% ................   Passed    0.82 sec
+        Start 157: reluBenchmark1.149944067s_SAT.nnet%builtin_property.txt%
+150/281 Test #151: reluBenchmark0.0594508647919s_UNSAT.nnet%builtin_property.txt% ...........   Passed    0.43 sec
+        Start 158: reluBenchmark0.165054798126s_UNSAT.nnet%builtin_property.txt%
+151/281 Test #152: reluBenchmark0.0918869972229s_UNSAT.nnet%builtin_property.txt% ...........   Passed    0.34 sec
+        Start 159: reluBenchmark0.00636315345764s_UNSAT.nnet%builtin_property.txt%
+152/281 Test #154: reluBenchmark0.0842049121857s_UNSAT.nnet%builtin_property.txt% ...........   Passed    0.26 sec
+        Start 160: reluBenchmark0.0596628189087s_UNSAT.nnet%builtin_property.txt%
+153/281 Test #153: reluBenchmark0.983299016953s_UNSAT.nnet%builtin_property.txt% ............   Passed    0.32 sec
+        Start 161: reluBenchmark0.0065929889679s_UNSAT.nnet%builtin_property.txt%
+154/281 Test #155: reluBenchmark0.213617086411s_UNSAT.nnet%builtin_property.txt% ............   Passed    0.32 sec
+        Start 162: reluBenchmark1.30961179733s_UNSAT.nnet%builtin_property.txt%
+155/281 Test #156: reluBenchmark0.666516065598s_UNSAT.nnet%builtin_property.txt% ............   Passed    0.35 sec
+        Start 163: reluBenchmark0.0715999603271s_UNSAT.nnet%builtin_property.txt%
+156/281 Test #161: reluBenchmark0.0065929889679s_UNSAT.nnet%builtin_property.txt% ...........   Passed    0.25 sec
+        Start 164: reluBenchmark0.29426407814s_UNSAT.nnet%builtin_property.txt%
+157/281 Test #159: reluBenchmark0.00636315345764s_UNSAT.nnet%builtin_property.txt% ..........   Passed    0.35 sec
+        Start 165: reluBenchmark0.294414997101s_SAT.nnet%builtin_property.txt%
+158/281 Test #158: reluBenchmark0.165054798126s_UNSAT.nnet%builtin_property.txt% ............   Passed    0.41 sec
+        Start 166: reluBenchmark0.124088048935s_UNSAT.nnet%builtin_property.txt%
+159/281 Test #160: reluBenchmark0.0596628189087s_UNSAT.nnet%builtin_property.txt% ...........   Passed    0.38 sec
+        Start 167: reluBenchmark0.0637600421906s_UNSAT.nnet%builtin_property.txt%
+160/281 Test #165: reluBenchmark0.294414997101s_SAT.nnet%builtin_property.txt% ..............   Passed    0.27 sec
+        Start 168: reluBenchmark0.00662088394165s_UNSAT.nnet%builtin_property.txt%
+161/281 Test #166: reluBenchmark0.124088048935s_UNSAT.nnet%builtin_property.txt% ............   Passed    0.24 sec
+        Start 169: reluBenchmark0.276684999466s_UNSAT.nnet%builtin_property.txt%
+162/281 Test #164: reluBenchmark0.29426407814s_UNSAT.nnet%builtin_property.txt% .............   Passed    0.36 sec
+        Start 170: reluBenchmark0.271136045456s_UNSAT.nnet%builtin_property.txt%
+163/281 Test #157: reluBenchmark1.149944067s_SAT.nnet%builtin_property.txt% .................   Passed    0.74 sec
+        Start 171: reluBenchmark0.101797103882s_UNSAT.nnet%builtin_property.txt%
+164/281 Test #163: reluBenchmark0.0715999603271s_UNSAT.nnet%builtin_property.txt% ...........   Passed    0.51 sec
+        Start 172: reluBenchmark0.836799860001s_SAT.nnet%builtin_property.txt%
+165/281 Test #167: reluBenchmark0.0637600421906s_UNSAT.nnet%builtin_property.txt% ...........   Passed    0.37 sec
+        Start 173: reluBenchmark0.907590150833s_UNSAT.nnet%builtin_property.txt%
+166/281 Test #168: reluBenchmark0.00662088394165s_UNSAT.nnet%builtin_property.txt% ..........   Passed    0.25 sec
+        Start 174: reluBenchmark1.54942297935s_UNSAT.nnet%builtin_property.txt%
+167/281 Test #172: reluBenchmark0.836799860001s_SAT.nnet%builtin_property.txt% ..............   Passed    0.35 sec
+        Start 175: reluBenchmark0.692045211792s_UNSAT.nnet%builtin_property.txt%
+168/281 Test #170: reluBenchmark0.271136045456s_UNSAT.nnet%builtin_property.txt% ............   Passed    0.38 sec
+        Start 176: reluBenchmark1.04315304756s_SAT.nnet%builtin_property.txt%
+169/281 Test #169: reluBenchmark0.276684999466s_UNSAT.nnet%builtin_property.txt% ............   Passed    0.42 sec
+        Start 177: reluBenchmark0.213303089142s_UNSAT.nnet%builtin_property.txt%
+170/281 Test #171: reluBenchmark0.101797103882s_UNSAT.nnet%builtin_property.txt% ............   Passed    0.39 sec
+        Start 178: reluBenchmark1.09928894043s_SAT.nnet%builtin_property.txt%
+171/281 Test #162: reluBenchmark1.30961179733s_UNSAT.nnet%builtin_property.txt% .............   Passed    1.07 sec
+        Start 179: reluBenchmark1.21413683891s_SAT.nnet%builtin_property.txt%
+172/281 Test #176: reluBenchmark1.04315304756s_SAT.nnet%builtin_property.txt% ...............   Passed    0.36 sec
+        Start 180: reluBenchmark0.183997154236s_UNSAT.nnet%builtin_property.txt%
+173/281 Test #177: reluBenchmark0.213303089142s_UNSAT.nnet%builtin_property.txt% ............   Passed    0.39 sec
+        Start 181: reluBenchmark0.514003992081s_SAT.nnet%builtin_property.txt%
+174/281 Test #179: reluBenchmark1.21413683891s_SAT.nnet%builtin_property.txt% ...............   Passed    0.29 sec
+        Start 182: reluBenchmark0.047042131424s_UNSAT.nnet%builtin_property.txt%
+175/281 Test #178: reluBenchmark1.09928894043s_SAT.nnet%builtin_property.txt% ...............   Passed    0.49 sec
+        Start 183: reluBenchmark0.0507640838623s_UNSAT.nnet%builtin_property.txt%
+176/281 Test #181: reluBenchmark0.514003992081s_SAT.nnet%builtin_property.txt% ..............   Passed    0.20 sec
+        Start 184: reluBenchmark0.83825802803s_UNSAT.nnet%builtin_property.txt%
+177/281 Test #173: reluBenchmark0.907590150833s_UNSAT.nnet%builtin_property.txt% ............   Passed    0.89 sec
+        Start 185: reluBenchmark0.262641906738s_UNSAT.nnet%builtin_property.txt%
+178/281 Test #174: reluBenchmark1.54942297935s_UNSAT.nnet%builtin_property.txt% .............   Passed    0.83 sec
+        Start 186: reluBenchmark0.434634923935s_SAT.nnet%builtin_property.txt%
+179/281 Test #175: reluBenchmark0.692045211792s_UNSAT.nnet%builtin_property.txt% ............   Passed    0.72 sec
+        Start 187: reluBenchmark0.950109958649s_SAT.nnet%builtin_property.txt%
+180/281 Test #184: reluBenchmark0.83825802803s_UNSAT.nnet%builtin_property.txt% .............   Passed    0.15 sec
+        Start 188: reluBenchmark0.62436914444s_SAT.nnet%builtin_property.txt%
+181/281 Test #180: reluBenchmark0.183997154236s_UNSAT.nnet%builtin_property.txt% ............   Passed    0.40 sec
+        Start 189: reluBenchmark0.73387503624s_UNSAT.nnet%builtin_property.txt%
+182/281 Test #183: reluBenchmark0.0507640838623s_UNSAT.nnet%builtin_property.txt% ...........   Passed    0.31 sec
+        Start 190: reluBenchmark0.0452961921692s_UNSAT.nnet%builtin_property.txt%
+183/281 Test #182: reluBenchmark0.047042131424s_UNSAT.nnet%builtin_property.txt% ............   Passed    0.40 sec
+        Start 191: reluBenchmark0.828888177872s_SAT.nnet%builtin_property.txt%
+184/281 Test #185: reluBenchmark0.262641906738s_UNSAT.nnet%builtin_property.txt% ............   Passed    0.26 sec
+        Start 192: reluBenchmark0.996887922287s_SAT.nnet%builtin_property.txt%
+185/281 Test #186: reluBenchmark0.434634923935s_SAT.nnet%builtin_property.txt% ..............   Passed    0.33 sec
+        Start 193: reluBenchmark0.0575940608978s_UNSAT.nnet%builtin_property.txt%
+186/281 Test #188: reluBenchmark0.62436914444s_SAT.nnet%builtin_property.txt% ...............   Passed    0.31 sec
+        Start 194: reluBenchmark0.213079929352s_UNSAT.nnet%builtin_property.txt%
+187/281 Test #187: reluBenchmark0.950109958649s_SAT.nnet%builtin_property.txt% ..............   Passed    0.54 sec
+        Start 195: reluBenchmark1.81178617477s_UNSAT.nnet%builtin_property.txt%
+188/281 Test #191: reluBenchmark0.828888177872s_SAT.nnet%builtin_property.txt% ..............   Passed    0.44 sec
+        Start 196: reluBenchmark0.956095933914s_UNSAT.nnet%builtin_property.txt%
+189/281 Test #190: reluBenchmark0.0452961921692s_UNSAT.nnet%builtin_property.txt% ...........   Passed    0.50 sec
+        Start 197: reluBenchmark0.00601387023926s_UNSAT.nnet%builtin_property.txt%
+190/281 Test #192: reluBenchmark0.996887922287s_SAT.nnet%builtin_property.txt% ..............   Passed    0.58 sec
+        Start 198: mnist-bnn_index0_eps0.0001_target7_sat.ipq%--verbosity=0
+191/281 Test #193: reluBenchmark0.0575940608978s_UNSAT.nnet%builtin_property.txt% ...........   Passed    0.61 sec
+        Start 199: mnist-bnn_index0_eps0.0001_target7_sat.ipq%--num-workers=2
+192/281 Test #195: reluBenchmark1.81178617477s_UNSAT.nnet%builtin_property.txt% .............   Passed    0.47 sec
+        Start 200: mnist-bnn_index0_eps0.001_target7_sat.ipq%--verbosity=0
+193/281 Test #194: reluBenchmark0.213079929352s_UNSAT.nnet%builtin_property.txt% ............   Passed    0.67 sec
+        Start 201: mnist-bnn_index0_eps0.001_target7_sat.ipq%--num-workers=2
+194/281 Test #197: reluBenchmark0.00601387023926s_UNSAT.nnet%builtin_property.txt% ..........   Passed    0.55 sec
+        Start 202: mnist-bnn_index1_eps0.0001_target2_sat.ipq%--verbosity=0
+195/281 Test #189: reluBenchmark0.73387503624s_UNSAT.nnet%builtin_property.txt% .............   Passed    1.27 sec
+        Start 203: mnist-bnn_index1_eps0.0001_target2_sat.ipq%--num-workers=2
+196/281 Test #196: reluBenchmark0.956095933914s_UNSAT.nnet%builtin_property.txt% ............   Passed    1.41 sec
+        Start 204: mnist-bnn_index1_eps0.001_target2_sat.ipq%--verbosity=0
+197/281 Test  #68: Test_wsElimination .......................................................   Passed   15.13 sec
+        Start 205: mnist-bnn_index1_eps0.001_target2_sat.ipq%--num-workers=2
+198/281 Test #199: mnist-bnn_index0_eps0.0001_target7_sat.ipq%--num-workers=2 ...............   Passed    4.67 sec
+        Start 206: mnist-bnn_index2_eps0.0001_target1_sat.ipq%--verbosity=0
+199/281 Test #198: mnist-bnn_index0_eps0.0001_target7_sat.ipq%--verbosity=0 .................   Passed    4.85 sec
+        Start 207: mnist-bnn_index2_eps0.0001_target1_sat.ipq%--num-workers=2
+200/281 Test #202: mnist-bnn_index1_eps0.0001_target2_sat.ipq%--verbosity=0 .................   Passed    4.51 sec
+        Start 208: mnist-bnn_index2_eps0.001_target1_sat.ipq%--verbosity=0
+201/281 Test #203: mnist-bnn_index1_eps0.0001_target2_sat.ipq%--num-workers=2 ...............   Passed    5.74 sec
+        Start 209: mnist-bnn_index2_eps0.001_target1_sat.ipq%--num-workers=2
+202/281 Test #204: mnist-bnn_index1_eps0.001_target2_sat.ipq%--verbosity=0 ..................   Passed    6.06 sec
+        Start 210: mnist-bnn_index3_eps0.0001_target0_sat.ipq%--verbosity=0
+203/281 Test #200: mnist-bnn_index0_eps0.001_target7_sat.ipq%--verbosity=0 ..................   Passed    9.03 sec
+        Start 211: mnist-bnn_index3_eps0.0001_target0_sat.ipq%--num-workers=2
+204/281 Test #205: mnist-bnn_index1_eps0.001_target2_sat.ipq%--num-workers=2 ................   Passed    7.12 sec
+        Start 212: mnist-bnn_index3_eps0.001_target0_sat.ipq%--verbosity=0
+205/281 Test #201: mnist-bnn_index0_eps0.001_target7_sat.ipq%--num-workers=2 ................   Passed   10.94 sec
+        Start 213: mnist-bnn_index3_eps0.001_target0_sat.ipq%--num-workers=2
+206/281 Test #208: mnist-bnn_index2_eps0.001_target1_sat.ipq%--verbosity=0 ..................   Passed    6.36 sec
+        Start 214: mnist-bnn_index4_eps0.0001_target4_sat.ipq%--verbosity=0
+207/281 Test #210: mnist-bnn_index3_eps0.0001_target0_sat.ipq%--verbosity=0 .................   Passed    3.99 sec
+        Start 215: mnist-bnn_index4_eps0.0001_target4_sat.ipq%--num-workers=2
+208/281 Test #207: mnist-bnn_index2_eps0.0001_target1_sat.ipq%--num-workers=2 ...............   Passed    6.57 sec
+        Start 216: mnist-bnn_index4_eps0.001_target4_sat.ipq%--verbosity=0
+209/281 Test #206: mnist-bnn_index2_eps0.0001_target1_sat.ipq%--verbosity=0 .................   Passed    7.22 sec
+        Start 217: mnist-bnn_index4_eps0.001_target4_sat.ipq%--num-workers=2
+210/281 Test #212: mnist-bnn_index3_eps0.001_target0_sat.ipq%--verbosity=0 ..................   Passed    5.11 sec
+        Start 218: mnist-relu-max-pool_index0_eps0.0001_target7_sat.ipq%--verbosity=0
+211/281 Test #211: mnist-bnn_index3_eps0.0001_target0_sat.ipq%--num-workers=2 ...............   Passed    7.12 sec
+        Start 219: mnist-relu-max-pool_index0_eps0.0001_target7_sat.ipq%--num-workers=2
+212/281 Test #214: mnist-bnn_index4_eps0.0001_target4_sat.ipq%--verbosity=0 .................   Passed    5.71 sec
+        Start 220: mnist-relu-max-pool_index0_eps0.001_target7_sat.ipq%--verbosity=0
+213/281 Test #215: mnist-bnn_index4_eps0.0001_target4_sat.ipq%--num-workers=2 ...............   Passed    6.16 sec
+        Start 221: mnist-relu-max-pool_index0_eps0.001_target7_sat.ipq%--num-workers=2
+214/281 Test #216: mnist-bnn_index4_eps0.001_target4_sat.ipq%--verbosity=0 ..................   Passed    6.28 sec
+        Start 222: mnist-relu-max-pool_index1_eps0.0001_target2_sat.ipq%--verbosity=0
+215/281 Test #213: mnist-bnn_index3_eps0.001_target0_sat.ipq%--num-workers=2 ................   Passed    6.97 sec
+        Start 223: mnist-relu-max-pool_index1_eps0.0001_target2_sat.ipq%--num-workers=2
+216/281 Test #209: mnist-bnn_index2_eps0.001_target1_sat.ipq%--num-workers=2 ................   Passed   12.42 sec
+        Start 224: mnist-relu-max-pool_index1_eps0.001_target2_sat.ipq%--verbosity=0
+217/281 Test #217: mnist-bnn_index4_eps0.001_target4_sat.ipq%--num-workers=2 ................   Passed    7.23 sec
+        Start 225: mnist-relu-max-pool_index1_eps0.001_target2_sat.ipq%--num-workers=2
+218/281 Test #218: mnist-relu-max-pool_index0_eps0.0001_target7_sat.ipq%--verbosity=0 .......   Passed    8.34 sec
+        Start 226: mnist-relu-max-pool_index2_eps0.0001_target1_sat.ipq%--verbosity=0
+219/281 Test #224: mnist-relu-max-pool_index1_eps0.001_target2_sat.ipq%--verbosity=0 ........   Passed    5.84 sec
+        Start 227: mnist-relu-max-pool_index2_eps0.0001_target1_sat.ipq%--num-workers=2
+220/281 Test #222: mnist-relu-max-pool_index1_eps0.0001_target2_sat.ipq%--verbosity=0 .......   Passed    8.13 sec
+        Start 228: mnist-relu-max-pool_index2_eps0.001_target1_sat.ipq%--verbosity=0
+221/281 Test #220: mnist-relu-max-pool_index0_eps0.001_target7_sat.ipq%--verbosity=0 ........   Passed    9.13 sec
+        Start 229: mnist-relu-max-pool_index2_eps0.001_target1_sat.ipq%--num-workers=2
+222/281 Test #219: mnist-relu-max-pool_index0_eps0.0001_target7_sat.ipq%--num-workers=2 .....   Passed   11.11 sec
+        Start 230: mnist-relu-max-pool_index3_eps0.0001_target0_sat.ipq%--verbosity=0
+223/281 Test #223: mnist-relu-max-pool_index1_eps0.0001_target2_sat.ipq%--num-workers=2 .....   Passed   12.44 sec
+        Start 231: mnist-relu-max-pool_index3_eps0.0001_target0_sat.ipq%--num-workers=2
+224/281 Test #221: mnist-relu-max-pool_index0_eps0.001_target7_sat.ipq%--num-workers=2 ......   Passed   13.19 sec
+        Start 232: mnist-relu-max-pool_index3_eps0.001_target0_sat.ipq%--verbosity=0
+225/281 Test #225: mnist-relu-max-pool_index1_eps0.001_target2_sat.ipq%--num-workers=2 ......   Passed   12.29 sec
+        Start 233: mnist-relu-max-pool_index3_eps0.001_target0_sat.ipq%--num-workers=2
+226/281 Test #226: mnist-relu-max-pool_index2_eps0.0001_target1_sat.ipq%--verbosity=0 .......   Passed    8.79 sec
+        Start 234: mnist-relu-max-pool_index4_eps0.0001_target4_sat.ipq%--verbosity=0
+227/281 Test #228: mnist-relu-max-pool_index2_eps0.001_target1_sat.ipq%--verbosity=0 ........   Passed    8.81 sec
+        Start 235: mnist-relu-max-pool_index4_eps0.0001_target4_sat.ipq%--num-workers=2
+228/281 Test #230: mnist-relu-max-pool_index3_eps0.0001_target0_sat.ipq%--verbosity=0 .......   Passed    8.13 sec
+        Start 236: mnist-relu-max-pool_index4_eps0.001_target4_sat.ipq%--verbosity=0
+229/281 Test #227: mnist-relu-max-pool_index2_eps0.0001_target1_sat.ipq%--num-workers=2 .....   Passed   11.99 sec
+        Start 237: mnist-relu-max-pool_index4_eps0.001_target4_sat.ipq%--num-workers=2
+230/281 Test #232: mnist-relu-max-pool_index3_eps0.001_target0_sat.ipq%--verbosity=0 ........   Passed    7.43 sec
+        Start 238: mnist-bnn_index0_eps0.0001_target9_unsat.ipq%--verbosity=0
+231/281 Test #229: mnist-relu-max-pool_index2_eps0.001_target1_sat.ipq%--num-workers=2 ......   Passed   12.02 sec
+        Start 239: mnist-bnn_index0_eps0.0001_target9_unsat.ipq%--num-workers=2
+232/281 Test #234: mnist-relu-max-pool_index4_eps0.0001_target4_sat.ipq%--verbosity=0 .......   Passed    6.82 sec
+        Start 240: mnist-bnn_index0_eps0.001_target9_unsat.ipq%--verbosity=0
+233/281 Test #239: mnist-bnn_index0_eps0.0001_target9_unsat.ipq%--num-workers=2 .............   Passed    2.24 sec
+        Start 241: mnist-bnn_index0_eps0.001_target9_unsat.ipq%--num-workers=2
+234/281 Test #238: mnist-bnn_index0_eps0.0001_target9_unsat.ipq%--verbosity=0 ...............   Passed    2.35 sec
+        Start 242: mnist-bnn_index1_eps0.0001_target9_unsat.ipq%--verbosity=0
+235/281 Test #242: mnist-bnn_index1_eps0.0001_target9_unsat.ipq%--verbosity=0 ...............   Passed    1.77 sec
+        Start 243: mnist-bnn_index1_eps0.0001_target9_unsat.ipq%--num-workers=2
+236/281 Test #236: mnist-relu-max-pool_index4_eps0.001_target4_sat.ipq%--verbosity=0 ........   Passed    7.15 sec
+        Start 244: mnist-bnn_index1_eps0.001_target9_unsat.ipq%--verbosity=0
+237/281 Test #231: mnist-relu-max-pool_index3_eps0.0001_target0_sat.ipq%--num-workers=2 .....   Passed   13.36 sec
+        Start 245: mnist-bnn_index1_eps0.001_target9_unsat.ipq%--num-workers=2
+238/281 Test #243: mnist-bnn_index1_eps0.0001_target9_unsat.ipq%--num-workers=2 .............   Passed    2.05 sec
+        Start 246: mnist-bnn_index2_eps0.0001_target9_unsat.ipq%--verbosity=0
+239/281 Test #233: mnist-relu-max-pool_index3_eps0.001_target0_sat.ipq%--num-workers=2 ......   Passed   13.13 sec
+        Start 247: mnist-bnn_index2_eps0.0001_target9_unsat.ipq%--num-workers=2
+240/281 Test #235: mnist-relu-max-pool_index4_eps0.0001_target4_sat.ipq%--num-workers=2 .....   Passed   11.49 sec
+        Start 248: mnist-bnn_index3_eps0.0001_target9_unsat.ipq%--verbosity=0
+241/281 Test #237: mnist-relu-max-pool_index4_eps0.001_target4_sat.ipq%--num-workers=2 ......   Passed   10.75 sec
+        Start 249: mnist-bnn_index3_eps0.0001_target9_unsat.ipq%--num-workers=2
+242/281 Test #249: mnist-bnn_index3_eps0.0001_target9_unsat.ipq%--num-workers=2 .............   Passed    2.51 sec
+        Start 250: mnist-bnn_index3_eps0.001_target9_unsat.ipq%--verbosity=0
+243/281 Test #244: mnist-bnn_index1_eps0.001_target9_unsat.ipq%--verbosity=0 ................   Passed    7.30 sec
+        Start 251: mnist-bnn_index3_eps0.001_target9_unsat.ipq%--num-workers=2
+244/281 Test #248: mnist-bnn_index3_eps0.0001_target9_unsat.ipq%--verbosity=0 ...............   Passed    4.88 sec
+        Start 252: mnist-bnn_index4_eps0.0001_target9_unsat.ipq%--verbosity=0
+245/281 Test #252: mnist-bnn_index4_eps0.0001_target9_unsat.ipq%--verbosity=0 ...............   Passed    1.84 sec
+        Start 253: mnist-bnn_index4_eps0.0001_target9_unsat.ipq%--num-workers=2
+246/281 Test #250: mnist-bnn_index3_eps0.001_target9_unsat.ipq%--verbosity=0 ................   Passed    3.41 sec
+        Start 254: mnist-bnn_index4_eps0.001_target9_unsat.ipq%--verbosity=0
+247/281 Test #245: mnist-bnn_index1_eps0.001_target9_unsat.ipq%--num-workers=2 ..............   Passed    9.74 sec
+        Start 255: mnist-bnn_index4_eps0.001_target9_unsat.ipq%--num-workers=2
+248/281 Test #251: mnist-bnn_index3_eps0.001_target9_unsat.ipq%--num-workers=2 ..............   Passed    4.71 sec
+        Start 256: mnist-relu-max-pool_index0_eps0.0001_target9_unsat.ipq%--verbosity=0
+249/281 Test #253: mnist-bnn_index4_eps0.0001_target9_unsat.ipq%--num-workers=2 .............   Passed    2.42 sec
+        Start 257: mnist-relu-max-pool_index0_eps0.0001_target9_unsat.ipq%--num-workers=2
+250/281 Test #256: mnist-relu-max-pool_index0_eps0.0001_target9_unsat.ipq%--verbosity=0 .....   Passed    1.30 sec
+        Start 258: mnist-relu-max-pool_index0_eps0.001_target9_unsat.ipq%--verbosity=0
+251/281 Test #257: mnist-relu-max-pool_index0_eps0.0001_target9_unsat.ipq%--num-workers=2 ...   Passed    1.04 sec
+        Start 259: mnist-relu-max-pool_index0_eps0.001_target9_unsat.ipq%--num-workers=2
+252/281 Test #258: mnist-relu-max-pool_index0_eps0.001_target9_unsat.ipq%--verbosity=0 ......   Passed    0.67 sec
+        Start 260: mnist-relu-max-pool_index1_eps0.0001_target9_unsat.ipq%--verbosity=0
+253/281 Test #259: mnist-relu-max-pool_index0_eps0.001_target9_unsat.ipq%--num-workers=2 ....   Passed    1.04 sec
+        Start 261: mnist-relu-max-pool_index1_eps0.0001_target9_unsat.ipq%--num-workers=2
+254/281 Test #260: mnist-relu-max-pool_index1_eps0.0001_target9_unsat.ipq%--verbosity=0 .....   Passed    0.63 sec
+        Start 262: mnist-relu-max-pool_index1_eps0.001_target9_unsat.ipq%--verbosity=0
+255/281 Test #262: mnist-relu-max-pool_index1_eps0.001_target9_unsat.ipq%--verbosity=0 ......   Passed    1.09 sec
+        Start 263: mnist-relu-max-pool_index1_eps0.001_target9_unsat.ipq%--num-workers=2
+256/281 Test #261: mnist-relu-max-pool_index1_eps0.0001_target9_unsat.ipq%--num-workers=2 ...   Passed    1.52 sec
+        Start 264: mnist-relu-max-pool_index2_eps0.0001_target9_unsat.ipq%--verbosity=0
+257/281 Test #263: mnist-relu-max-pool_index1_eps0.001_target9_unsat.ipq%--num-workers=2 ....   Passed    0.57 sec
+        Start 265: mnist-relu-max-pool_index2_eps0.0001_target9_unsat.ipq%--num-workers=2
+258/281 Test #264: mnist-relu-max-pool_index2_eps0.0001_target9_unsat.ipq%--verbosity=0 .....   Passed    0.59 sec
+        Start 266: mnist-relu-max-pool_index2_eps0.001_target9_unsat.ipq%--verbosity=0
+259/281 Test #265: mnist-relu-max-pool_index2_eps0.0001_target9_unsat.ipq%--num-workers=2 ...   Passed    1.03 sec
+        Start 267: mnist-relu-max-pool_index2_eps0.001_target9_unsat.ipq%--num-workers=2
+260/281 Test #266: mnist-relu-max-pool_index2_eps0.001_target9_unsat.ipq%--verbosity=0 ......   Passed    0.68 sec
+        Start 268: mnist-relu-max-pool_index3_eps0.0001_target9_unsat.ipq%--verbosity=0
+261/281 Test #268: mnist-relu-max-pool_index3_eps0.0001_target9_unsat.ipq%--verbosity=0 .....   Passed    0.70 sec
+        Start 269: mnist-relu-max-pool_index3_eps0.0001_target9_unsat.ipq%--num-workers=2
+262/281 Test #267: mnist-relu-max-pool_index2_eps0.001_target9_unsat.ipq%--num-workers=2 ....   Passed    0.81 sec
+        Start 270: mnist-relu-max-pool_index3_eps0.001_target9_unsat.ipq%--verbosity=0
+263/281 Test #269: mnist-relu-max-pool_index3_eps0.0001_target9_unsat.ipq%--num-workers=2 ...   Passed    0.59 sec
+        Start 271: mnist-relu-max-pool_index3_eps0.001_target9_unsat.ipq%--num-workers=2
+264/281 Test #270: mnist-relu-max-pool_index3_eps0.001_target9_unsat.ipq%--verbosity=0 ......   Passed    0.76 sec
+        Start 272: mnist-relu-max-pool_index4_eps0.0001_target9_unsat.ipq%--verbosity=0
+265/281 Test #271: mnist-relu-max-pool_index3_eps0.001_target9_unsat.ipq%--num-workers=2 ....   Passed    0.68 sec
+        Start 273: mnist-relu-max-pool_index4_eps0.0001_target9_unsat.ipq%--num-workers=2
+266/281 Test #272: mnist-relu-max-pool_index4_eps0.0001_target9_unsat.ipq%--verbosity=0 .....   Passed    0.99 sec
+        Start 274: mnist-relu-max-pool_index4_eps0.001_target9_unsat.ipq%--verbosity=0
+267/281 Test #273: mnist-relu-max-pool_index4_eps0.0001_target9_unsat.ipq%--num-workers=2 ...   Passed    0.58 sec
+        Start 275: mnist-relu-max-pool_index4_eps0.001_target9_unsat.ipq%--num-workers=2
+268/281 Test #274: mnist-relu-max-pool_index4_eps0.001_target9_unsat.ipq%--verbosity=0 ......   Passed    0.77 sec
+        Start 276: ACASXU_experimental_v2a_3_7.nnet%acas_property_4.txt%
+269/281 Test #275: mnist-relu-max-pool_index4_eps0.001_target9_unsat.ipq%--num-workers=2 ....   Passed    0.86 sec
+        Start 277: reluBenchmark2.66962385178s_UNSAT.nnet%builtin_property.txt%
+270/281 Test #276: ACASXU_experimental_v2a_3_7.nnet%acas_property_4.txt% ....................   Passed    1.50 sec
+        Start 278: ACASXU_experimental_v2a_3_9.nnet%acas_property_3.txt%--snc
+271/281 Test #246: mnist-bnn_index2_eps0.0001_target9_unsat.ipq%--verbosity=0 ...............   Passed   23.63 sec
+        Start 279: reluBenchmark2.64361000061s_SAT.nnet%builtin_property.txt%
+272/281 Test #277: reluBenchmark2.66962385178s_UNSAT.nnet%builtin_property.txt% .............   Passed    5.52 sec
+        Start 280: mnist10x10.nnet%image3_target8_epsilon0.1.txt%
+273/281 Test #280: mnist10x10.nnet%image3_target8_epsilon0.1.txt% ...........................   Passed    0.99 sec
+        Start 281: mnist10x10.nnet%image3_target9_epsilon0.005.txt%
+274/281 Test #281: mnist10x10.nnet%image3_target9_epsilon0.005.txt% .........................   Passed    0.54 sec
+275/281 Test #247: mnist-bnn_index2_eps0.0001_target9_unsat.ipq%--num-workers=2 .............   Passed   26.07 sec
+276/281 Test #279: reluBenchmark2.64361000061s_SAT.nnet%builtin_property.txt% ...............   Passed    3.07 sec
+277/281 Test #278: ACASXU_experimental_v2a_3_9.nnet%acas_property_3.txt%--snc ...............   Passed    6.64 sec
+278/281 Test #254: mnist-bnn_index4_eps0.001_target9_unsat.ipq%--verbosity=0 ................   Passed   22.27 sec
+279/281 Test #255: mnist-bnn_index4_eps0.001_target9_unsat.ipq%--num-workers=2 ..............   Passed   24.22 sec
+280/281 Test #240: mnist-bnn_index0_eps0.001_target9_unsat.ipq%--verbosity=0 ................   Passed   54.31 sec
+281/281 Test #241: mnist-bnn_index0_eps0.001_target9_unsat.ipq%--num-workers=2 ..............   Passed   64.74 sec
+
+100% tests passed, 0 tests failed out of 281
+
+Label Time Summary:
+basis_factorization unit       =   1.23 sec*proc (14 tests)
+common unit                    =   2.41 sec*proc (19 tests)
+engine unit                    =   4.39 sec*proc (26 tests)
+lp system                      =  34.65 sec*proc (9 tests)
+network_level_reasoner unit    =   1.69 sec*proc (4 tests)
+proofs unit                    =   0.54 sec*proc (5 tests)
+query_loader unit              =   0.26 sec*proc (1 test)
+regress0
+    sat acasxu        =   2.03 sec*proc (2 tests)
+regress0
+    sat coav          =   0.72 sec*proc (2 tests)
+regress0
+    sat mps           =   0.53 sec*proc (1 test)
+regress0
+    unsat acasxu      =   0.41 sec*proc (1 test)
+regress0
+    unsat coav        =   0.53 sec*proc (2 tests)
+regress0
+    unsat mnist       =   3.55 sec*proc (2 tests)
+regress0
+    unsat mps         =   0.47 sec*proc (1 test)
+regress1
+    sat acasxu        =   5.45 sec*proc (4 tests)
+regress1
+    sat coav          =  12.64 sec*proc (33 tests)
+regress1
+    sat ipq           = 334.39 sec*proc (40 tests)
+regress1
+    sat mnist         =   4.12 sec*proc (1 test)
+regress1
+    unsat acasxu      =  12.78 sec*proc (6 tests)
+regress1
+    unsat coav        =  26.75 sec*proc (62 tests)
+regress1
+    unsat ipq         = 277.33 sec*proc (38 tests)
+regress1
+    unsat mnist       =   2.77 sec*proc (3 tests)
+regress2
+    sat coav          =   3.07 sec*proc (1 test)
+regress2
+    sat mnist         =   0.99 sec*proc (1 test)
+regress2
+    unsat acasxu      =   1.50 sec*proc (1 test)
+regress2
+    unsat coav        =   5.52 sec*proc (1 test)
+regress2
+    unsat mnist       =   0.54 sec*proc (1 test)
+
+[100%] Built target check
